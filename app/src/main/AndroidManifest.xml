@@ -13,16 +13,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AddressValActivity" />
+        <activity android:name=".AddProspectActivity" />
+        <activity android:name=".NewConstitActivity" />
+        <activity android:name=".PetitionActivity" />
+        <activity android:name=".ViewConstitActivity" />
+        <activity android:name=".ProblemActivity" />
+        <activity android:name=".HomeActivity"></activity>
     </application>
 
 </manifest>
