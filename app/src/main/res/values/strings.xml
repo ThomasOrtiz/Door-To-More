@@ -15,7 +15,7 @@
         completions."
     </string>
     <string name="prospect_addresses">Prospect Addresses</string>
-    <string name="map">Map</string>
-    <string name="add_constituent">Add constituent</string>
-    <string name="back">Back</string>
+    <string name="mapcircle">Map</string>
+    <string name="plusbutton">Add constituent</string>
+    <string name="backarrow">Back</string>
 </resources>
