@@ -48,6 +48,7 @@ public class AddProspectActivity extends AppCompatActivity {
                 intent.putExtra("addressLineOne", addressLineOne);
                 intent.putExtra("addressLineTwo", addressLineTwo);
                 startActivity(intent);
+                self.finish();
             }
         });
     }

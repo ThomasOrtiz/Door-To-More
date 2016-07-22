@@ -1,6 +1,7 @@
 package blackbaud.advocacymobileapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,18 +24,23 @@ public class AddressValActivity extends AppCompatActivity {
 
         TextView addressLineOneView = (TextView)findViewById(R.id.addressLineOneView);
         TextView addressLineTwoView = (TextView)findViewById(R.id.addressLineTwoView);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
         addressLineOneView.setText(addressLineOne);
         addressLineTwoView.setText(addressLineTwo);
+        addressLineOneView.setTypeface(tf);
+        addressLineTwoView.setTypeface(tf);
     }
 
     public void failedConstit(View view) {
         Intent intent = new Intent(this, ProblemActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void successConstit(View view) {
         Intent intent = new Intent(this, NewConstitActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
