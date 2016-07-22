@@ -3,25 +3,33 @@ package blackbaud.advocacymobileapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class AddProspectActivity extends AppCompatActivity {
-    ArrayList<Address> addressItems = new ArrayList<Address>();
+    ArrayList<Address> addressItems;
     ArrayAdapter<String> adapter;
-    ArrayList<String> addressStrings = new ArrayList<String>();
+    String[] addressStrings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Comes with it, can't remove
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_prospect);
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, addressStrings);
+        addressItems = new ArrayList<>();
         get_addresses();
+
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, addressStrings);
+
+        ListView listView = (ListView) findViewById(R.id.listView);
+        if(listView!=null) listView.setAdapter(adapter);
     }
 
     private void populate_list() {
+        addressStrings = new String[addressItems.size()];
         for(int i = 0; i < addressItems.size(); i++) {
-            adapter.add(addressItems.get(i).toString());
+            addressStrings[i]= addressItems.get(i).toString();
         }
     }
 
@@ -41,7 +49,7 @@ public class AddProspectActivity extends AppCompatActivity {
         Address addr8 = new Address("1776 Gettysburg Dr", "Philadelphia", "PA", "19019", "USA");
         Address addr9 = new Address("413 Sheltered Cove Ct", "Fort Mill", "SC", "29708", "USA");
 
-        ArrayList<Address> addresses = new ArrayList<Address>();
+        ArrayList<Address> addresses = new ArrayList<>();
         addresses.add(addr1);
         addresses.add(addr2);
         addresses.add(addr3);
@@ -53,5 +61,6 @@ public class AddProspectActivity extends AppCompatActivity {
         addresses.add(addr9);
 
         populate_addresses(addresses);
+        populate_list();
     }
 }
