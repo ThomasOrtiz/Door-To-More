@@ -24,14 +24,14 @@ public class Constituent {
     public String city;
     public String state;
     public String zipcode;
-    public String country;
+    public String county;
     public Collection<InterestItem> interest_items;
     public String date;
 
     public Constituent(){}
 
     public Constituent(String first_name, String last_name, String middle_name, String preferred_pronoun, String secondary_phone, String email,
-                       String notes, String street_address, String city_address, String state_address, String zipcode_address, String country_address
+                       String notes, String street_address, String city_address, String state_address, String zipcode_address, String county_address
             , Collection<InterestItem> interest_items, String date)
     {
         this.first_name = first_name;
@@ -45,7 +45,7 @@ public class Constituent {
         this.city= city_address;
         this.state = state_address;
         this.zipcode = zipcode_address;
-        this.country = country_address;
+        this.county = county_address;
         this.interest_items = interest_items;
         this.date = date;
     }
