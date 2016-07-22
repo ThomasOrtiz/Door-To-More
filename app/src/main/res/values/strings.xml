@@ -14,4 +14,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="prospect_addresses">Prospect Addresses</string>
+    <string name="map">Map</string>
+    <string name="add_constituent">Add constituent</string>
+    <string name="back">Back</string>
 </resources>
