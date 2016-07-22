@@ -22,7 +22,7 @@
         android:layout_below="@+id/problemBackButton"
         android:layout_alignStart="@+id/problemBackButton"
         android:layout_marginTop="34dp"
-        android:textColor="#f56565" />
+        android:textColor="#ed5565" />
 
     <EditText
         android:layout_width="fill_parent"

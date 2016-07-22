@@ -58,7 +58,8 @@
             tools:ignore="ContentDescription"
             android:layout_alignParentTop="true"
             android:background="@drawable/back"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:onClick="back"/>
 
 
     </RelativeLayout>
