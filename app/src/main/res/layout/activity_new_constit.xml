@@ -194,7 +194,11 @@
                 android:id="@+id/button1"
                 android:layout_below="@+id/editText9"
                 android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/editText8" />
+                android:layout_alignEnd="@+id/editText8"
+                android:onClick="onClick"
+                android:background="#1c84c6"
+                android:textColor="#FFFFFF"
+                android:layout_margin="7dp" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -203,7 +207,10 @@
                 android:id="@+id/button3"
                 android:layout_below="@+id/button1"
                 android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/editText8" />
+                android:layout_alignEnd="@+id/editText8"
+                android:background="#1ab394"
+                android:textColor="#FFFFFF"
+                android:layout_margin="7dp" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -257,7 +264,9 @@
                 android:id="@+id/button"
                 android:layout_below="@+id/editTex11"
                 android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/editText5" />
+                android:layout_alignEnd="@+id/editText5"
+                android:background="#1ab394"
+                android:textColor="#FFFFFF" />
 
 
         </RelativeLayout>

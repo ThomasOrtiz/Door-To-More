@@ -15,32 +15,34 @@ public class ViewConstitActivity extends AppCompatActivity {
 
     // List view
     private ListView lv;
+    private DoorData myData;
 
     // false = show only my personal people I added
     // true  = show ALL of the people
+    ArrayList<Constituent> constituents;
     private boolean allConstit;
 
     // Listview Adapter
     ArrayAdapter<String> adapter;
 
     // Search EditText
-    EditText inputSearch;
-
-
-    // ArrayList for Listview
-    ArrayList<HashMap<String, String>> conList;
+    EditText filterSearch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_constit);
         allConstit = false;
-
-        String conList[] = {"Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
-                "iPhone 4S", "Samsung Galaxy Note 800",
-                "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro"};
-
         lv = (ListView) findViewById(R.id.listView);
+        filterSearch = (EditText) findViewById(R.id.filterText);
+        myData = DoorData.getInstance();
+        constituents = myData.getConstituents();
+
+
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, myData.getConstituentStrings());
+        if(lv!=null) lv.setAdapter(adapter);
+
+
 
     }
 

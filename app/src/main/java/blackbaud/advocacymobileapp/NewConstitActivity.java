@@ -61,6 +61,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
 
+        Intent intent = null;
+
         switch (v.getId()) {
 
             case R.id.button:
@@ -100,15 +102,22 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
 
             case R.id.button1:
                 // petition
+                intent = new Intent(this, PetitionActivity.class);
 
                 break;
 
             case R.id.button3:
-                // donate
+                Intent intent = new Intent(NewConstitActivity.this, DonateActivity.class);
+                startActivity(intent);
                 break;
 
             default:
                 break;
+        }
+
+        if(intent != null) {
+            startActivity(intent);
+            finish();
         }
 
     }
