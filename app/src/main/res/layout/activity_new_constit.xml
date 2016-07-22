@@ -64,6 +64,8 @@
                 android:id="@+id/editText3"
                 android:layout_below="@+id/textView2"
                 android:layout_alignParentStart="true"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignEnd="@+id/textView4" />
 
             <EditText
@@ -72,6 +74,8 @@
                 android:id="@+id/editText"
                 android:layout_alignTop="@+id/editText3"
                 android:layout_alignEnd="@+id/textView"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignStart="@+id/textView3" />
 
             <TextView
@@ -90,6 +94,8 @@
                 android:ems="10"
                 android:id="@+id/editText2"
                 android:layout_below="@+id/textView4"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -108,6 +114,8 @@
                 android:ems="10"
                 android:id="@+id/editText4"
                 android:layout_below="@+id/textView5"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -125,6 +133,8 @@
                 android:id="@+id/editText5"
                 android:layout_below="@+id/textView6"
                 android:layout_alignParentStart="true"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignParentEnd="true" />
 
             <TextView
@@ -161,6 +171,8 @@
                 android:layout_below="@+id/textView7"
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@+id/textView8"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignEnd="@+id/textView5" />
 
             <EditText
@@ -169,6 +181,8 @@
                 android:id="@+id/editText7"
                 android:layout_below="@+id/textView8"
                 android:layout_alignStart="@+id/textView8"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_toStartOf="@+id/editText" />
 
             <EditText
@@ -177,6 +191,8 @@
                 android:id="@+id/editText8"
                 android:layout_below="@+id/textView9"
                 android:layout_alignStart="@+id/textView9"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignEnd="@+id/editText" />
 
             <TextView
@@ -194,6 +210,8 @@
                 android:id="@+id/editText9"
                 android:layout_below="@+id/textView10"
                 android:layout_alignParentStart="true"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_toStartOf="@+id/editText7" />
 
 
@@ -265,6 +283,8 @@
                 android:id="@+id/editText12"
                 android:layout_below="@+id/textView11"
                 android:layout_alignParentStart="true"
+                android:background="@drawable/back"
+                android:padding="10dp"
                 android:layout_alignEnd="@+id/textView3" />
 
             <Button
@@ -277,23 +297,6 @@
                 android:layout_alignEnd="@+id/editText5"
                 android:background="#1ab394"
                 android:textColor="#FFFFFF" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/editText11"
-                android:layout_alignTop="@+id/editText9"
-                android:layout_alignEnd="@+id/editText8"
-                android:layout_toEndOf="@+id/editText9" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Country"
-                android:id="@+id/textView15"
-                android:layout_above="@+id/editText11"
-                android:layout_toEndOf="@+id/editText9" />
 
 
         </RelativeLayout>

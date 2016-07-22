@@ -60,7 +60,7 @@ public class AddProspectActivity extends AppCompatActivity {
                         city = a.get_city();
                         state = a.get_state();
                         zipcode = a.get_zip();
-                        country = a.get_country();
+                        country = a.get_county();
                         break;
                     }
                 }

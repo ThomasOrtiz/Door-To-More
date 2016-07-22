@@ -23,35 +23,19 @@ public class DoorData {
 
     // Should dynamically get addresses if this wasn't a prototype
     private void test_data(){
-<<<<<<< HEAD
-        Address addr1 = new Address("713 A Smoke Rise Dr", "Central", "SC", "29630", "USA");
-        Address addr2 = new Address("104 Evergreen Ave", "Springfield", "NJ", "07081", "USA");
-        Address addr3 = new Address("1222 Moose Mountain Ct", "Denver", "Colorado", "27573", "USA");
-        Address addr4 = new Address("666 Fallen Lane", "Columbia", "SC", "29201", "USA");
-        Address addr5 = new Address("101 Vista Montana", "San Jose", "CA", "95134", "USA");
-        Address addr6 = new Address("116 East Green St", "Pendleton", "SC", "29570", "USA");
-        Address addr7 = new Address("42 Applegate Dr", "Orlando", "FL", "32801", "USA");
-        Address addr8 = new Address("1776 Gettysburg Dr", "Philadelphia", "PA", "19019", "USA");
-        Address addr9 = new Address("413 Sheltered Cove Ct", "Fort Mill", "SC", "29708", "USA");
-        Address addr10 = new Address("1534 152 Ave", "Cameron", "IL", "61423", "USA");
-        Address addr11 = new Address("6712 Unity Rd", "Tuscaloosa", "AL", "35401", "USA");
-        Address addr12 = new Address("51 Scott Dr", "New City", "NY", "10956", "USA");
-        Address addr13 = new Address("1129 Ambling Way", "Mt Pleasant", "SC", "29464", "USA");
-=======
-        Address addr1 = new Address("713 A Smoke Rise Dr", "Central", "SC", "29630", "USA", null);
-        Address addr2 = new Address("104 Evergreen Ave", "Springfield", "NJ", "07081", "USA", null);
-        Address addr3 = new Address("1222 Moose Mountain Ct", "Quebec City", "Quebec", "G1A 1C5", "Canada", null);
-        Address addr4 = new Address("666 Fallen Lane", "Columbia", "SC", "29201", "USA", null);
-        Address addr5 = new Address("101 Vista Montana", "San Jose", "CA", "95134", "USA", null);
-        Address addr6 = new Address("116 East Green St", "Pendleton", "SC", "29570", "USA", null);
-        Address addr7 = new Address("42 Applegate Dr", "Orlando", "FL", "32801", "USA", null);
-        Address addr8 = new Address("1776 Gettysburg Dr", "Philadelphia", "PA", "19019", "USA", null);
-        Address addr9 = new Address("413 Sheltered Cove Ct", "Fort Mill", "SC", "29708", "USA", null);
-        Address addr10 = new Address("1534 152 Ave", "Cameron", "IL", "61423", "USA", null);
-        Address addr11 = new Address("6712 Unity Rd", "Tuscaloosa", "AL", "35401", "USA", null);
-        Address addr12 = new Address("51 Scott Dr", "New City", "NY", "10956", "USA", null);
-        Address addr13 = new Address("1129 Ambling Way", "Mt Pleasant", "SC", "29464", "USA", null);
->>>>>>> origin/master
+        Address addr1 = new Address("713 A Smoke Rise Dr", "Central", "SC", "29630", "Person");
+        Address addr2 = new Address("104 Evergreen Ave", "Springfield", "NJ", "07081", "Orange");
+        Address addr3 = new Address("1222 Moose Mountain Ct", "Denver", "Co", "27573", "Benson");
+        Address addr4 = new Address("666 Fallen Lane", "Columbia", "SC", "29201", "Wake");
+        Address addr5 = new Address("101 Vista Montana", "San Jose", "CA", "95134", "Jefferson");
+        Address addr6 = new Address("116 East Green St", "Pendleton", "SC", "29570", "Jackson");
+        Address addr7 = new Address("42 Applegate Dr", "Orlando", "FL", "32801", "Clay");
+        Address addr8 = new Address("1776 Gettysburg Dr", "Philadelphia", "PA", "19019", "York");
+        Address addr9 = new Address("413 Sheltered Cove Ct", "Fort Mill", "SC", "29708", "Lake");
+        Address addr10 = new Address("1534 152 Ave", "Cameron", "IL", "61423", "Lee");
+        Address addr11 = new Address("6712 Unity Rd", "Tuscaloosa", "AL", "35401", "Calhoun");
+        Address addr12 = new Address("51 Scott Dr", "New City", "NY", "10956", "Crawford");
+        Address addr13 = new Address("1129 Ambling Way", "Mt Pleasant", "SC", "29464", "Butler");
 
         this.addressList.add(addr1);
         this.addressList.add(addr2);
@@ -67,19 +51,19 @@ public class DoorData {
         this.addressList.add(addr12);
         this.addressList.add(addr13);
 
-        Constituent constit1 = new Constituent("Vere", "Brooks", null, null, null, null, null, null, null, null, null, null, null, null, "7/21/2016" );
-        Constituent constit2 = new Constituent("Kegan", "Colton", null, null, null, null, null, null, null, null, null, null, null, null, "7/21/2016");
-        Constituent constit3 = new Constituent("Grier", "May", null, null, null, null, null, null, null, null, null, null, null, null, "7/21/2016");
-        Constituent constit4 = new Constituent("Thomas", "Thorburn", null, null, null, null, null, null, null, null, null, null, null, null, "7/19/2016");
-        Constituent constit5 = new Constituent("Ricky", "Putnam", null, null, null, null, null, null, null, null, null, null, null, null, "7/19/2016");
-        Constituent constit6 = new Constituent("Trace", "Stamp", null, null, null, null, null, null, null, null, null, null, null, null, "7/13/2016");
-        Constituent constit7 = new Constituent("Gabe", "Bailey", null, null, null, null, null, null, null, null, null, null, null, null, "7/13/2016");
-        Constituent constit8 = new Constituent("Elton", "Summers", null, null, null, null, null, null, null, null, null, null, null, null, "7/13/2016");
-        Constituent constit9 = new Constituent("Darwin", "Bryson", null, null, null, null, null, null, null, null, null, null, null, null, "7/4/2016");
-        Constituent constit10 = new Constituent("Stewart", "Aiken", null, null, null, null, null, null, null, null, null, null, null, null, "7/4/2016");
-        Constituent constit11 = new Constituent("William", "Harlow", null, null, null, null, null, null, null, null, null, null, null, null, "7/4/2016");
-        Constituent constit12 = new Constituent("Kegan", "Westbrook", null, null, null, null, null, null, null, null, null, null, null, null, "7/3/2016");
-        Constituent constit13 = new Constituent("Weldon", "Bradley", null, null, null, null, null, null, null, null, null, null, null, null, "7/3/2016");
+        Constituent constit1 = new Constituent("Vere", "Brooks", null, null, null, null, null, null, null, null, "7/21/2016" );
+        Constituent constit2 = new Constituent("Kegan", "Colton", null, null, null, null, null, null, null, null, "7/21/2016");
+        Constituent constit3 = new Constituent("Grier", "May", null, null, null, null, null, null, null, null, "7/21/2016");
+        Constituent constit4 = new Constituent("Thomas", "Thorburn", null, null, null, null, null, null, null, null, "7/19/2016");
+        Constituent constit5 = new Constituent("Ricky", "Putnam", null, null, null, null, null, null, null, null, "7/19/2016");
+        Constituent constit6 = new Constituent("Trace", "Stamp",  null, null, null, null, null, null, null, null, "7/13/2016");
+        Constituent constit7 = new Constituent("Gabe", "Bailey", null, null, null, null, null, null, null, null, "7/13/2016");
+        Constituent constit8 = new Constituent("Elton", "Summers",  null, null, null, null, null, null, null, null, "7/13/2016");
+        Constituent constit9 = new Constituent("Darwin", "Bryson", null, null, null, null, null, null, null, null, "7/4/2016");
+        Constituent constit10 = new Constituent("Stewart", "Aiken",  null, null, null, null, null, null, null, null, "7/4/2016");
+        Constituent constit11 = new Constituent("William", "Harlow", null, null, null, null, null, null, null, null, "7/4/2016");
+        Constituent constit12 = new Constituent("Kegan", "Westbrook",  null, null, null, null, null, null, null, null, "7/3/2016");
+        Constituent constit13 = new Constituent("Weldon", "Bradley",  null, null, null, null, null, null, null, null, "7/3/2016");
 
         this.constitList.add(constit1);
         this.constitList.add(constit2);
