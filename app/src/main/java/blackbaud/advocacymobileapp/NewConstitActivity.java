@@ -103,7 +103,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
             case R.id.button1:
                 // petition
                 intent = new Intent(this, PetitionActivity.class);
-
+                intent.putExtra("first_name", first_name.toString());
+                intent.putExtra("last_name", last_name.toString());
                 break;
 
             case R.id.button3:
