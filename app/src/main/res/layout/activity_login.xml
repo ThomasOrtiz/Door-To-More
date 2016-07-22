@@ -15,10 +15,36 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bbimg"
+        android:src="@drawable/door_no_bg"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="89dp" />
+        android:layout_marginTop="89dp"
+        android:id="@+id/imageView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="32"
+        android:paddingTop="50dp"
+        android:hint="UserName"
+        android:id="@+id/usernameField"
+        android:width="300dp"
+        android:maxWidth="300dp"
+        android:layout_above="@+id/passwordField"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="32"
+        android:paddingTop="50dp"
+        android:hint="Password"
+        android:id="@+id/passwordField"
+        android:width="300dp"
+        android:maxWidth="300dp"
+        android:layout_above="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -29,7 +55,19 @@
         android:onClick = "onSignInClicked"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText10"
+        android:layout_above="@+id/usernameField"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="136dp" />
+        android:text="Door To More"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:textAllCaps="true"
+        android:textColor="#1ab394"/>
 
 </RelativeLayout>
