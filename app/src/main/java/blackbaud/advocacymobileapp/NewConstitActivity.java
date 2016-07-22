@@ -109,8 +109,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 new_constituent.first_name = first_name.toString();
                 new_constituent.last_name = last_name.toString();
                 new_constituent.phone = phone_number.toString();
-                new_constituent.address = new Address(street.toString(), city.toString(), state.toString(),
-                        zipcode.toString(), county.toString());
+                new_constituent.address = new Address(street, city, state, zipcode, county);
                 new_constituent.email = email.toString();
                 new_constituent.notes = comment.toString();
                 myData.addConstituient(new_constituent);
