@@ -55,7 +55,7 @@ public class AddProspectActivity extends AppCompatActivity {
                     if(a.toString() == item) {
                         myData.setCurrentAddress(a);
                         addressLineOne = a.get_street();
-                        addressLineTwo = a.get_city() + " ," + a.get_state() + " " + a.get_zip();
+                        addressLineTwo = a.get_city() + ", " + a.get_state() + " " + a.get_zip();
                         street = a.get_street();
                         city = a.get_city();
                         state = a.get_state();

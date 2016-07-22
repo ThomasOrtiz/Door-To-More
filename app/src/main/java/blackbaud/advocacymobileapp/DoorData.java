@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class DoorData {
     private static DoorData data = null;
     private Address currentAddress = null;
+    private Constituent currentConstit = null;
     private ArrayList<Address> addressList;
     private ArrayList<Constituent> constitList;
     private ArrayList<String> petitionList;
@@ -135,6 +136,14 @@ public class DoorData {
 
     public Address getCurrentAddress() {
         return this.currentAddress;
+    }
+
+    public void setCurrentConstituent(Constituent con) {
+        this.currentConstit = con;
+    }
+
+    public Constituent getCurrentConstituent() {
+        return this.currentConstit;
     }
 
     public void addPetitionSign(String constit) {

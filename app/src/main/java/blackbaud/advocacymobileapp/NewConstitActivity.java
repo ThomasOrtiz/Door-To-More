@@ -21,10 +21,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     private TextView first_name, last_name, phone_number, email, comment, street_view, city_view, state_view, zipcode_view, county_view;
     private CheckBox issue1, issue2, issue3;
     private DoorData myData;
-    private String street, city, state, zipcode, county;
-
-
-
+    private String first, last, street, city, state, zipcode, county;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +54,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         issue3 = (CheckBox) findViewById(R.id.checkBox3);
 
         Intent intent = getIntent();
+        first = intent.getStringExtra("first");
+        last = intent.getStringExtra("last");
         street = intent.getStringExtra("street");
         city = intent.getStringExtra("city");
         zipcode = intent.getStringExtra("zipcode");
@@ -64,12 +63,26 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         county = intent.getStringExtra("county");
 
         Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
+        //first_name.setText(first);
+        if(myData.getCurrentConstituent() != null && myData.getCurrentConstituent().first_name != null) {
+            first_name.setText(myData.getCurrentConstituent().first_name);
+        }
+        else {
+            first_name.setText(first);
+        }
+        if(myData.getCurrentConstituent() != null && myData.getCurrentConstituent().last_name != null) {
+            last_name.setText(myData.getCurrentConstituent().last_name);
+        }
+        else {
+            last_name.setText(last);
+        }
         state_view.setText(state);
         street_view.setText(street);
         city_view.setText(city);
         zipcode_view.setText(zipcode);
         county_view.setText(county);
 
+        first_name.setTypeface(tf);
         state_view.setTypeface(tf);
         street_view.setTypeface(tf);
         city_view.setTypeface(tf);
@@ -122,6 +135,14 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 intent = new Intent(this, PetitionActivity.class);
                 intent.putExtra("first_name", first_name.toString());
                 intent.putExtra("last_name", last_name.toString());
+                Constituent c = new Constituent();
+                c.first_name = first_name.getText().toString();
+                c.last_name = last_name.getText().toString();
+                //c.phone = phone_number.toString();
+                //c.address = new Address(street, city, state, zipcode, county);
+                //c.email = email.toString();
+                //c.notes = comment.toString();
+                myData.setCurrentConstituent(c);
                 break;
 
             // Make a donation
