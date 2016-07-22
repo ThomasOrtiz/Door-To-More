@@ -9,4 +9,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="blackbaud.advocacymobileapp.ProblemActivity">
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="What went wrong?"
+        android:id="@+id/textView"
+        android:layout_row="17"
+        android:layout_column="7"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:layout_below="@+id/problemBackButton"
+        android:layout_alignStart="@+id/problemBackButton"
+        android:layout_marginTop="34dp"
+        android:textColor="#f56565" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="361dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/problemEditText"
+        android:layout_row="25"
+        android:layout_column="7"
+        android:background="#FFFFFF"
+        android:layout_above="@+id/problemSaveButton"
+        android:layout_alignParentStart="true"
+        android:outlineProvider="none"
+        android:selectAllOnFocus="false"
+        android:gravity="top" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="57dp"
+        android:id="@+id/problemSaveButton"
+        android:layout_row="26"
+        android:layout_column="7"
+        android:onClick="clickSave"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#1ab394"
+        android:text="Save Comment"
+        android:textColor="#FFFFFF" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/problemBackButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/backbutton"
+        android:onClick="back" />
 </RelativeLayout>
