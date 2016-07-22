@@ -18,16 +18,17 @@
         android:src="@drawable/door_no_bg"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="89dp"
+        android:layout_marginTop="67dp"
         android:id="@+id/imageView" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxLength="32"
+        android:maxLength="16"
         android:paddingTop="50dp"
         android:hint="UserName"
         android:id="@+id/usernameField"
+        android:singleLine="true"
         android:width="300dp"
         android:maxWidth="300dp"
         android:layout_above="@+id/passwordField"
@@ -36,10 +37,12 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxLength="32"
+        android:maxLength="16"
         android:paddingTop="50dp"
+        android:singleLine="true"
         android:hint="Password"
         android:id="@+id/passwordField"
+        android:inputType="textPassword"
         android:width="300dp"
         android:maxWidth="300dp"
         android:layout_above="@+id/imageButton"
