@@ -12,10 +12,12 @@ public class DoorData {
     private Address currentAddress = null;
     private ArrayList<Address> addressList;
     private ArrayList<Constituent> constitList;
+    private ArrayList<String> petitionList;
 
     private DoorData() {
         addressList = new ArrayList<Address>();
         constitList = new ArrayList<Constituent>();
+        petitionList = new ArrayList<String>();
         test_addresses();
     }
 
@@ -116,6 +118,10 @@ public class DoorData {
 
     public Address getCurrentAddress() {
         return this.currentAddress;
+    }
+
+    public void addPetitionSign(String constit) {
+        this.petitionList.add(constit);
     }
 
     public static DoorData getInstance() {

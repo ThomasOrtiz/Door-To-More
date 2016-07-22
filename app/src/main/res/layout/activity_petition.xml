@@ -51,7 +51,8 @@
             android:textColor="#FFFFFF"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:paddingTop="7dp" />
+            android:paddingTop="7dp"
+            android:onClick="signPetition"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,7 +63,8 @@
             android:layout_alignTop="@+id/button4"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="false"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:onClick="cancelPetition"/>
 
         <Button
             android:layout_width="fill_parent"
