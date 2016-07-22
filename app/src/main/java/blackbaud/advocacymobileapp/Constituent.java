@@ -50,4 +50,8 @@ public class Constituent {
         this.date = date;
     }
 
+    public String toString() {
+        return first_name + " " + last_name;
+    }
+
 }

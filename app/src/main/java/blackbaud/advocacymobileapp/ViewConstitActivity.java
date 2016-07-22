@@ -32,6 +32,7 @@ public class ViewConstitActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_constit);
+
         allConstit = false;
         lv = (ListView) findViewById(R.id.listView);
         filterSearch = (EditText) findViewById(R.id.filterText);

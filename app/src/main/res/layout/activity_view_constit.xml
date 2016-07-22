@@ -76,10 +76,10 @@
         </LinearLayout>
 
         <ListView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="472dp"
             android:id="@+id/listView"
-            android:layout_gravity="center_horizontal|bottom" />
+            android:layout_gravity="center_horizontal|bottom|left" />
 
     </FrameLayout>
 
