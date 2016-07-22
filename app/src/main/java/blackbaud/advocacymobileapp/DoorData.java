@@ -25,7 +25,7 @@ public class DoorData {
     private void test_data(){
         Address addr1 = new Address("713 A Smoke Rise Dr", "Central", "SC", "29630", "USA");
         Address addr2 = new Address("104 Evergreen Ave", "Springfield", "NJ", "07081", "USA");
-        Address addr3 = new Address("1222 Moose Mountain Ct", "Quebec City", "Quebec", "G1A 1C5", "Canada");
+        Address addr3 = new Address("1222 Moose Mountain Ct", "Denver", "Colorado", "27573", "USA");
         Address addr4 = new Address("666 Fallen Lane", "Columbia", "SC", "29201", "USA");
         Address addr5 = new Address("101 Vista Montana", "San Jose", "CA", "95134", "USA");
         Address addr6 = new Address("116 East Green St", "Pendleton", "SC", "29570", "USA");

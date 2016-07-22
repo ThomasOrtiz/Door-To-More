@@ -1,5 +1,6 @@
 package blackbaud.advocacymobileapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,8 +26,11 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.button5:
                 finish();
                 break;
-
         }
+    }
+
+    public void back(View view) {
+        finish();
     }
 
 

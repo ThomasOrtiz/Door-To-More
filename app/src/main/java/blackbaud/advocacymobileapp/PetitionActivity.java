@@ -35,18 +35,17 @@ public class PetitionActivity extends AppCompatActivity {
         textHeader.setTypeface(headerTypeface);
         textNoButton.setTypeface(bodyTypeface);
         textYesButton.setTypeface(bodyTypeface);
-
-
     }
 
     public void signPetition(View view) {
         Intent intent = getIntent();
         String name = intent.getStringExtra("first_name") + " " + intent.getStringExtra("last_name");
         myData.addPetitionSign(name);
-        startActivity(previous);
+
+        finish();
     }
 
     public void cancelPetition(View view) {
-        startActivity(previous);
+        finish();
     }
 }

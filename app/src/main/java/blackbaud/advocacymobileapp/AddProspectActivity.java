@@ -70,12 +70,16 @@ public class AddProspectActivity extends AppCompatActivity {
                 intent.putExtra("state", state);
                 intent.putExtra("zipcode", zipcode);
                 startActivity(intent);
-                self.finish();
+                //self.finish();
             }
         });
     }
 
     public void back(View view) {
+        Intent nextScreen = new Intent(getApplicationContext(), HomeActivity.class);
+        nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(nextScreen, 0);
+        overridePendingTransition(0, 0); //0 for no animation
         finish();
     }
 

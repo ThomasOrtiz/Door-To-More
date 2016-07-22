@@ -48,6 +48,10 @@ public class ViewConstitActivity extends AppCompatActivity {
     }
 
     public void finishActivity(View view) {
+        Intent nextScreen = new Intent(getApplicationContext(), HomeActivity.class);
+        nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(nextScreen, 0);
+        overridePendingTransition(0, 0); //0 for no animation
         finish();
     }
 

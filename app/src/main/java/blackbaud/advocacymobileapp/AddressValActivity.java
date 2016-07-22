@@ -52,6 +52,9 @@ public class AddressValActivity extends AppCompatActivity {
     public void failedConstit(View view) {
         Intent intent = new Intent(this, ProblemActivity.class);
         startActivity(intent);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(intent, 0);
+        overridePendingTransition(0, 0); //0 for no animation
         finish();
     }
 
@@ -62,7 +65,17 @@ public class AddressValActivity extends AppCompatActivity {
         intent.putExtra("state", state);
         intent.putExtra("zipcode", zipcode);
         startActivity(intent);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(intent, 0);
+        overridePendingTransition(0, 0); //0 for no animation
         finish();
     }
 
+    public void back(View view) {
+        Intent intent = new Intent(this, AddProspectActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(intent, 0);
+        overridePendingTransition(0, 0); //0 for no animation
+        finish();
+    }
 }

@@ -29,6 +29,7 @@
         <activity android:name=".ProblemActivity" />
         <activity android:name=".PetitionActivity"/>
         <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".DonateActivity"></activity>
     </application>
 
 </manifest>

@@ -26,11 +26,16 @@ public class ProblemActivity extends AppCompatActivity {
         //Save message
         Address current = myData.getCurrentAddress();
         myData.removeAddress(current);
-        startActivity(intent);
+
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(intent, 0);
+        overridePendingTransition(0, 0); //0 for no animation
     }
 
     public void back(View view) {
         Intent intent = new Intent(this, AddressValActivity.class);
-        startActivity(intent);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(intent, 0);
+        overridePendingTransition(0, 0); //0 for no animation
     }
 }

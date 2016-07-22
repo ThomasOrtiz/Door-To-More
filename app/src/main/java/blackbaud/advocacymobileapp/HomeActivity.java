@@ -18,7 +18,6 @@ public class HomeActivity extends AppCompatActivity {
         nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivityForResult(nextScreen, 0);
         overridePendingTransition(0,0); //0 for no animation
-        //finish();
     }
 
     public void onViewConstituentsClicked(View view) {
@@ -26,6 +25,5 @@ public class HomeActivity extends AppCompatActivity {
         nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivityForResult(nextScreen, 0);
         overridePendingTransition(0,0); //0 for no animation
-        //finish();
     }
 }

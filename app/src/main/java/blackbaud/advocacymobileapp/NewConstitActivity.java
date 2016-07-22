@@ -23,7 +23,6 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     private TextView first_name, last_name, phone_number, email, county, comment, street_view, city_view, state_view, zipcode_view;
     private CheckBox issue1, issue2, issue3;
     private DoorData myData;
-    private ImageButton backarrow;
     private String street, city, state, zipcode;
 
 
@@ -33,9 +32,6 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_constit);
         myData = DoorData.getInstance();
-
-        backarrow = (ImageButton) findViewById(R.id.imageButton);
-        backarrow.setOnClickListener(this);
 
         submit = (Button) findViewById(R.id.button);
         submit.setOnClickListener(this);
@@ -122,16 +118,16 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 // submit
                 break;
 
+            // Petition
             case R.id.button1:
-                // petition
                 intent = new Intent(this, PetitionActivity.class);
                 intent.putExtra("first_name", first_name.toString());
                 intent.putExtra("last_name", last_name.toString());
                 break;
 
+            // Make a donation
             case R.id.button3:
-                intent = new Intent(NewConstitActivity.this, DonateActivity.class);
-                startActivity(intent);
+                intent = new Intent(this, DonateActivity.class);
                 break;
 
             case R.id.imageButton:
@@ -148,4 +144,14 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         }
 
     }
+
+    public void back(View view) {
+        Intent nextScreen = new Intent(getApplicationContext(), AddProspectActivity.class);
+        nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(nextScreen, 0);
+        overridePendingTransition(0, 0); //0 for no animation
+
+        finish();
+    }
+
 }
