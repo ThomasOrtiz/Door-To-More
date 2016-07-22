@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class AddressValActivity extends AppCompatActivity {
 
-    private String address;
+    private String addressLineOne;
+    private String addressLineTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +18,10 @@ public class AddressValActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        address = intent.getStringExtra("address");
+        addressLineOne = intent.getStringExtra("addressLineOne");
+
+        TextView addressLineOneView = (TextView)findViewById(R.id.addressLineOneView);
+        addressLineOneView.setText(addressLineOne);
     }
 
     public void failedConstit(View view) {
