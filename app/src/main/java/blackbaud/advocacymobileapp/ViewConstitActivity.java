@@ -36,7 +36,7 @@ public class ViewConstitActivity extends AppCompatActivity {
                 "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro"};
 
         lv = (ListView) findViewById(R.id.listView);
-        inputSearch = (EditText) (R.id.filterText);
+        //inputSearch = (EditText) (R.id.filterText);
 
         // Adding items to listview
         //adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.product_name, products);
