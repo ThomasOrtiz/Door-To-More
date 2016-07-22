@@ -26,7 +26,7 @@ public class DoorData {
         Address addr1 = new Address("713 A Smoke Rise Dr", "Central", "SC", "29630", "Person");
         Address addr2 = new Address("104 Evergreen Ave", "Springfield", "NJ", "07081", "Orange");
         Address addr3 = new Address("1222 Moose Mountain Ct", "Denver", "Co", "27573", "Benson");
-        Address addr4 = new Address("666 Fallen Lane", "Columbia", "SC", "29201", "Wake");
+        Address addr4 = new Address("369 Fallen Lane", "Columbia", "SC", "29201", "Wake");
         Address addr5 = new Address("101 Vista Montana", "San Jose", "CA", "95134", "Jefferson");
         Address addr6 = new Address("116 East Green St", "Pendleton", "SC", "29570", "Jackson");
         Address addr7 = new Address("42 Applegate Dr", "Orlando", "FL", "32801", "Clay");
