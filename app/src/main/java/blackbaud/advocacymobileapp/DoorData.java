@@ -15,6 +15,7 @@ public class DoorData {
 
     private DoorData() {
         addressList = new ArrayList<Address>();
+        constitList = new ArrayList<Constituent>();
         test_addresses();
     }
 
