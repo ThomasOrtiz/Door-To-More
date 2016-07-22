@@ -9,4 +9,48 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="blackbaud.advocacymobileapp.AddressValActivity">
 
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:id="@+id/button"
+        android:layout_marginBottom="106dp"
+        android:background="#ed5565"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:id="@+id/button2"
+        android:layout_marginBottom="40dp"
+        android:background="#1ab394"
+        android:layout_above="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Is the prospect home and interested in learning more?"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="71dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:textColor="#1c84c6"
+        android:textStyle="bold" />
 </RelativeLayout>
