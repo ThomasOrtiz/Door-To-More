@@ -61,6 +61,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
 
+        Intent intent = null;
+
         switch (v.getId()) {
 
             case R.id.button:
@@ -100,6 +102,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
 
             case R.id.button1:
                 // petition
+                intent = new Intent(this, PetitionActivity.class);
 
                 break;
 
@@ -109,6 +112,11 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
 
             default:
                 break;
+        }
+
+        if(intent != null) {
+            startActivity(intent);
+            finish();
         }
 
     }

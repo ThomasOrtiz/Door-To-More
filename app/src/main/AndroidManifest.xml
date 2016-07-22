@@ -25,9 +25,9 @@
         <activity android:name=".AddressValActivity" />
         <activity android:name=".AddProspectActivity" />
         <activity android:name=".NewConstitActivity" />
-        <activity android:name=".PetitionActivity" />
         <activity android:name=".ViewConstitActivity" />
         <activity android:name=".ProblemActivity" />
+        <activity android:name=".PetitionActivity"/>
         <activity android:name=".HomeActivity"></activity>
     </application>
 

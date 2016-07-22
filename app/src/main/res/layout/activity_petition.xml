@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +7,70 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="blackbaud.advocacymobileapp.PetitionActivity">
+    tools:context=".PetitionActivity"
+    android:visibility="visible">
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/petition"
+            android:textSize="15dp"
+            android:id="@+id/textView12"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textView13"
+            android:layout_above="@+id/button3"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/petition_title"
+            android:id="@+id/textView13"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="#1c84c6" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Sign"
+            android:id="@+id/button3"
+            android:layout_marginBottom="57dp"
+            android:background="#1ab394"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="No Thanks"
+            android:id="@+id/textView14"
+            android:layout_alignTop="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="false"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button4"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:allowUndo="false" />
+
+    </RelativeLayout>
+
+</LinearLayout>
