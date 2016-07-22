@@ -76,6 +76,14 @@ public class DoorData {
         return this.constitList;
     }
 
+    public String[] getConstituentStrings() {
+        String[] conStrings = new String[constitList.size()];
+        for(int i = 0; i < constitList.size(); i++) {
+            conStrings[i]= constitList.get(i).toString();
+        }
+        return conStrings;
+    }
+
     public void addConstituient(Constituent con) {
         this.constitList.add(con);
     }
@@ -83,6 +91,7 @@ public class DoorData {
     public void removeConstituent(Constituent con) {
         int index = this.constitList.indexOf(con);
         this.constitList.remove(index);
+        getConstituentStrings();
     }
 
     public void setCurrentAddress(Address addr) {
