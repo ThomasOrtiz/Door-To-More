@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class AddressValActivity extends AppCompatActivity {
@@ -22,13 +23,22 @@ public class AddressValActivity extends AppCompatActivity {
         addressLineOne = intent.getStringExtra("addressLineOne");
         addressLineTwo = intent.getStringExtra("addressLineTwo");
 
+        Typeface headerTypeface = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
+        Typeface bodyTypeface = Typeface.createFromAsset(getAssets(), "fonts/OpenSans-Regular.ttf");
+
         TextView addressLineOneView = (TextView)findViewById(R.id.addressLineOneView);
         TextView addressLineTwoView = (TextView)findViewById(R.id.addressLineTwoView);
-        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
+        TextView query = (TextView)findViewById(R.id.textView2);
+        Button yesButton = (Button)findViewById(R.id.button2);
+        Button noButton = (Button)findViewById(R.id.button);
+
         addressLineOneView.setText(addressLineOne);
         addressLineTwoView.setText(addressLineTwo);
-        addressLineOneView.setTypeface(tf);
-        addressLineTwoView.setTypeface(tf);
+        addressLineOneView.setTypeface(headerTypeface);
+        addressLineTwoView.setTypeface(headerTypeface);
+        query.setTypeface(bodyTypeface);
+        yesButton.setTypeface(bodyTypeface);
+        noButton.setTypeface(bodyTypeface);
     }
 
     public void failedConstit(View view) {
