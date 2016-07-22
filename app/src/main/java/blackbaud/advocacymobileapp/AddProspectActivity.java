@@ -35,9 +35,18 @@ public class AddProspectActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3) {
                 String item = (String)adapter.getItemAtPosition(position);
+                String addressLineOne = null;
+                String addressLineTwo = null;
+                for (Address a : addressItems) {
+                    if(a.toString() == item) {
+                        addressLineOne = a.get_street();
+                        addressLineTwo = a.get_city() + ", " + a.get_state() + " " + a.get_zip();
+                        break;
+                    }
+                }
                 Intent intent = new Intent(self, AddressValActivity.class);
-                intent.putExtra("addressLineOne", item);
-                intent.putExtra("addressLineTwo", "dummy part");
+                intent.putExtra("addressLineOne", addressLineOne);
+                intent.putExtra("addressLineTwo", addressLineTwo);
                 startActivity(intent);
             }
         });

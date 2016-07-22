@@ -19,9 +19,12 @@ public class AddressValActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         addressLineOne = intent.getStringExtra("addressLineOne");
+        addressLineTwo = intent.getStringExtra("addressLineTwo");
 
         TextView addressLineOneView = (TextView)findViewById(R.id.addressLineOneView);
+        TextView addressLineTwoView = (TextView)findViewById(R.id.addressLineTwoView);
         addressLineOneView.setText(addressLineOne);
+        addressLineTwoView.setText(addressLineTwo);
     }
 
     public void failedConstit(View view) {
