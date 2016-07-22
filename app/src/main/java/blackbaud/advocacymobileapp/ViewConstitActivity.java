@@ -51,31 +51,12 @@ public class ViewConstitActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3) {
                 String item = (String)adapter.getItemAtPosition(position);
-                String addressLineOne = null;
-                String addressLineTwo = null;
-                String street = null;
-                String city = null;
-                String state = null;
-                String zipcode = null;
-                for (Address a : myData.getAddressList()) {
-                    if(a.toString() == item) {
-                        myData.setCurrentAddress(a);
-                        addressLineOne = a.get_street();
-                        addressLineTwo = a.get_city() + " ," + a.get_state() + " " + a.get_zip();
-                        street = a.get_street();
-                        city = a.get_city();
-                        state = a.get_state();
-                        zipcode= a.get_zip();
-                        break;
-                    }
-                }
+                String name = item.substring(item.indexOf(" ")).trim();
+                String firstName = name.substring(0, name.indexOf(" "));
+                String lastName = name.substring(name.indexOf(" "));
                 Intent intent = new Intent(self, AddressValActivity.class);
-                intent.putExtra("addressLineOne", addressLineOne);
-                intent.putExtra("addressLineTwo", addressLineTwo);
-                intent.putExtra("street", street);
-                intent.putExtra("city", city);
-                intent.putExtra("state", state);
-                intent.putExtra("zipcode", zipcode);
+                intent.putExtra("first_name", firstName);
+                intent.putExtra("last_name", lastName);
                 startActivity(intent);
                 self.finish();
             }
