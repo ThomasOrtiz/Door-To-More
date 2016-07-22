@@ -2,12 +2,14 @@ package blackbaud.advocacymobileapp;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import blackbaud.advocacymobileapp.InterestItem;
@@ -18,9 +20,11 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     Constituent new_constituent = new Constituent();
 
     private Button submit, donate, petition;
-    private TextView first_name, last_name, phone_number, email, street_address, city, state, zipcode, county, comment;
+    private TextView first_name, last_name, phone_number, email, county, comment, street_view, city_view, state_view, zipcode_view;
     private CheckBox issue1, issue2, issue3;
     private DoorData myData;
+    private ImageButton backarrow;
+    private String street, city, state, zipcode;
 
 
 
@@ -29,6 +33,9 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_constit);
         myData = DoorData.getInstance();
+
+        backarrow = (ImageButton) findViewById(R.id.imageButton);
+        backarrow.setOnClickListener(this);
 
         submit = (Button) findViewById(R.id.button);
         submit.setOnClickListener(this);
@@ -44,16 +51,32 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         last_name = (EditText) findViewById(R.id.editText);
         phone_number = (EditText) findViewById(R.id.editText2);
         email = (EditText) findViewById(R.id.editText4);
-        street_address = (EditText) findViewById(R.id.editText5);
-        city = (EditText) findViewById(R.id.editText6);
-        state = (EditText) findViewById(R.id.editText7);
-        zipcode = (EditText) findViewById(R.id.editText8);
         county = (EditText) findViewById(R.id.editText9);
         comment = (EditText) findViewById(R.id.editTex11);
-
+        street_view = (EditText) findViewById(R.id.editText5);
+        city_view = (EditText) findViewById(R.id.editText6);
+        state_view = (EditText) findViewById(R.id.editText7);
+        zipcode_view = (EditText) findViewById(R.id.editText8);
         issue1 = (CheckBox) findViewById(R.id.checkBox1);
         issue2 = (CheckBox) findViewById(R.id.checkBox2);
         issue3 = (CheckBox) findViewById(R.id.checkBox3);
+
+        Intent intent = getIntent();
+        street = intent.getStringExtra("street");
+        city = intent.getStringExtra("city");
+        zipcode = intent.getStringExtra("zipcode");
+        state = intent.getStringExtra("state");
+
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
+        state_view.setText(state);
+        street_view.setText(street);
+        city_view.setText(city);
+        zipcode_view.setText(zipcode);
+
+        state_view.setTypeface(tf);
+        street_view.setTypeface(tf);
+        city_view.setTypeface(tf);
+        zipcode_view.setTypeface(tf);
     }
 
 
@@ -91,7 +114,6 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 new_constituent.email = email.toString();
                 new_constituent.state = state.toString();
                 new_constituent.city = city.toString();
-                new_constituent.street_address = street_address.toString();
                 new_constituent.county = county.toString();
                 new_constituent.zipcode = zipcode.toString();
                 new_constituent.notes = comment.toString();
@@ -110,6 +132,10 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
             case R.id.button3:
                 intent = new Intent(NewConstitActivity.this, DonateActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.imageButton:
+                finish();
                 break;
 
             default:

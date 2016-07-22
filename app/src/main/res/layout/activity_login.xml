@@ -51,7 +51,6 @@
         android:layout_marginBottom="53dp"
         android:background="@drawable/back"
         android:padding="10dp"
-        android:text="sdf"
         android:layout_above="@+id/imageButton"
         android:layout_centerHorizontal="true" />
 

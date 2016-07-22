@@ -12,6 +12,10 @@ public class AddressValActivity extends AppCompatActivity {
 
     private String addressLineOne;
     private String addressLineTwo;
+    private String street;
+    private String state;
+    private String city;
+    private String zipcode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,10 @@ public class AddressValActivity extends AppCompatActivity {
 
         addressLineOne = intent.getStringExtra("addressLineOne");
         addressLineTwo = intent.getStringExtra("addressLineTwo");
+        street = intent.getStringExtra("street");
+        city = intent.getStringExtra("city");
+        zipcode = intent.getStringExtra("zipcode");
+        state = intent.getStringExtra("state");
 
         Typeface headerTypeface = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
         Typeface bodyTypeface = Typeface.createFromAsset(getAssets(), "fonts/OpenSans-Regular.ttf");
@@ -49,6 +57,10 @@ public class AddressValActivity extends AppCompatActivity {
 
     public void successConstit(View view) {
         Intent intent = new Intent(this, NewConstitActivity.class);
+        intent.putExtra("street", street);
+        intent.putExtra("city", city);
+        intent.putExtra("state", state);
+        intent.putExtra("zipcode", zipcode);
         startActivity(intent);
         finish();
     }

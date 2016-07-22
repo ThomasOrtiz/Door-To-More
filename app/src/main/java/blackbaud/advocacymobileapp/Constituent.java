@@ -26,10 +26,13 @@ public class Constituent {
     public String zipcode;
     public String county;
     public Collection<InterestItem> interest_items;
+    public String date;
 
-    public void Constituent(String first_name, String last_name, String middle_name, String preferred_pronoun, String secondary_phone, String email,
-                            String notes, String street_address, String city_address, String state_address, String zipcode_address, String county_address
-                            , Collection<InterestItem> interest_items)
+    public Constituent(){}
+
+    public Constituent(String first_name, String last_name, String middle_name, String preferred_pronoun, String secondary_phone, String email,
+                       String notes, String street_address, String city_address, String state_address, String zipcode_address, String county_address
+            , Collection<InterestItem> interest_items, String date)
     {
         this.first_name = first_name;
         this.middle_name = middle_name;
@@ -44,6 +47,7 @@ public class Constituent {
         this.zipcode = zipcode_address;
         this.county = county_address;
         this.interest_items = interest_items;
+        this.date = date;
     }
 
 }

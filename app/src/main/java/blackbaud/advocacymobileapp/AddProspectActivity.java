@@ -46,17 +46,29 @@ public class AddProspectActivity extends AppCompatActivity {
                 String item = (String)adapter.getItemAtPosition(position);
                 String addressLineOne = null;
                 String addressLineTwo = null;
+                String street = null;
+                String city = null;
+                String state = null;
+                String zipcode = null;
                 for (Address a : addressItems) {
                     if(a.toString() == item) {
                         myData.setCurrentAddress(a);
                         addressLineOne = a.get_street();
-                        addressLineTwo = a.get_city() + ", " + a.get_state() + " " + a.get_zip();
+                        addressLineTwo = a.get_city() + " ," + a.get_state() + " " + a.get_zip();
+                        street = a.get_street();
+                        city = a.get_city();
+                        state = a.get_state();
+                        zipcode= a.get_zip();
                         break;
                     }
                 }
                 Intent intent = new Intent(self, AddressValActivity.class);
                 intent.putExtra("addressLineOne", addressLineOne);
                 intent.putExtra("addressLineTwo", addressLineTwo);
+                intent.putExtra("street", street);
+                intent.putExtra("city", city);
+                intent.putExtra("state", state);
+                intent.putExtra("zipcode", zipcode);
                 startActivity(intent);
                 self.finish();
             }
