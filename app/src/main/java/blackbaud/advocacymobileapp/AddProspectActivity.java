@@ -50,6 +50,7 @@ public class AddProspectActivity extends AppCompatActivity {
                 String city = null;
                 String state = null;
                 String zipcode = null;
+                String country = null;
                 for (Address a : addressItems) {
                     if(a.toString() == item) {
                         myData.setCurrentAddress(a);
@@ -58,7 +59,8 @@ public class AddProspectActivity extends AppCompatActivity {
                         street = a.get_street();
                         city = a.get_city();
                         state = a.get_state();
-                        zipcode= a.get_zip();
+                        zipcode = a.get_zip();
+                        country = a.get_country();
                         break;
                     }
                 }
@@ -69,6 +71,7 @@ public class AddProspectActivity extends AppCompatActivity {
                 intent.putExtra("city", city);
                 intent.putExtra("state", state);
                 intent.putExtra("zipcode", zipcode);
+                intent.putExtra("country", country);
                 startActivity(intent);
                 self.finish();
             }
