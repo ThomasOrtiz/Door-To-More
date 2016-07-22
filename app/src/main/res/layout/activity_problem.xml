@@ -45,7 +45,7 @@
         android:id="@+id/problemSaveButton"
         android:layout_row="26"
         android:layout_column="7"
-        android:onClick="openAlert"
+        android:onClick="clickSave"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:background="#1ab394"
