@@ -11,7 +11,7 @@ public class DoorData {
     private static DoorData data = null;
     private Address currentAddress = null;
     private ArrayList<Address> addressList;
-    //private ArrayList<Constituent> constitList;
+    private ArrayList<Constituent> constitList;
 
     private DoorData() {
         addressList = new ArrayList<Address>();
@@ -71,7 +71,7 @@ public class DoorData {
         getAddressStrings();
     }
 
-    /*public ArrayList<Constituent> getConstituents() {
+    public ArrayList<Constituent> getConstituents() {
         return this.constitList;
     }
 
@@ -82,7 +82,7 @@ public class DoorData {
     public void removeConstituent(Constituent con) {
         int index = this.constitList.indexOf(con);
         this.constitList.remove(index);
-    }*/
+    }
 
     public void setCurrentAddress(Address addr) {
         this.currentAddress = addr;

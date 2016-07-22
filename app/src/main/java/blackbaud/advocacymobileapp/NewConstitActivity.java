@@ -20,6 +20,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     private Button submit, donate, petition;
     private TextView first_name, last_name, phone_number, email, street_address, city, state, zipcode, county, comment;
     private CheckBox issue1, issue2, issue3;
+    private DoorData myData;
 
 
 
@@ -27,6 +28,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_constit);
+        myData = DoorData.getInstance();
 
         submit = (Button) findViewById(R.id.button);
         submit.setOnClickListener(this);
@@ -91,6 +93,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 new_constituent.county_address = county.toString();
                 new_constituent.zipcode_address = zipcode.toString();
                 new_constituent.notes = comment.toString();
+                myData.addConstituient(new_constituent);
                 finish();
                 // submit
                 break;
