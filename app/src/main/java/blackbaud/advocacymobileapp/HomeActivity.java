@@ -18,14 +18,14 @@ public class HomeActivity extends AppCompatActivity {
         nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivityForResult(nextScreen, 0);
         overridePendingTransition(0,0); //0 for no animation
-        finish();
+        //finish();
     }
 
     public void onViewConstituentsClicked(View view) {
-        Intent nextScreen = new Intent(getApplicationContext(), HomeActivity.class);
+        Intent nextScreen = new Intent(getApplicationContext(), ViewConstitActivity.class);
         nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivityForResult(nextScreen, 0);
         overridePendingTransition(0,0); //0 for no animation
-        finish();
+        //finish();
     }
 }
