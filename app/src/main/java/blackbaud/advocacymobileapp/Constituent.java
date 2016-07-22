@@ -8,6 +8,7 @@ import blackbaud.advocacymobileapp.InterestItem;
  *
  *
  *
+ *
  */
 public class Constituent {
 

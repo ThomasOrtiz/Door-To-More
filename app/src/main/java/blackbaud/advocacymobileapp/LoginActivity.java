@@ -51,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
         nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivityForResult(nextScreen, 0);
         overridePendingTransition(0, 0); //0 for no animation
-        //finish();
     }
 
 }

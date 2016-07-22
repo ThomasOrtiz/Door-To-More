@@ -1,5 +1,6 @@
 package blackbaud.advocacymobileapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,10 @@ public class ViewConstitActivity extends AppCompatActivity {
     // List view
     private ListView lv;
 
+    // false = show only my personal people I added
+    // true  = show ALL of the people
+    private boolean allConstit;
+
     // Listview Adapter
     ArrayAdapter<String> adapter;
 
@@ -23,28 +28,31 @@ public class ViewConstitActivity extends AppCompatActivity {
 
 
     // ArrayList for Listview
-    ArrayList<HashMap<String, String>> productList;
+    ArrayList<HashMap<String, String>> conList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_constit);
+        allConstit = false;
 
-        // Listview Data
-        String products[] = {"Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
+        String conList[] = {"Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
                 "iPhone 4S", "Samsung Galaxy Note 800",
                 "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro"};
 
         lv = (ListView) findViewById(R.id.listView);
-        //inputSearch = (EditText) (R.id.filterText);
-
-        // Adding items to listview
-        //adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.product_name, products);
-        lv.setAdapter(adapter);
 
     }
 
     public void finishActivity(View view) {
         finish();
+    }
+
+    public void onFilterButtonClicked(View view) {
+        // Update List based off Filter
+    }
+
+    public void onSortButtonClicked(View view) {
+        // Update List based off sort
     }
 }
