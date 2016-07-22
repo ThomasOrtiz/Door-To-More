@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity">
+            android:name=".AddProspectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".AddressValActivity" />
-        <activity android:name=".AddProspectActivity" />
+        <!--<activity android:name=".AddProspectActivity" />-->
         <activity android:name=".NewConstitActivity" />
         <activity android:name=".PetitionActivity" />
         <activity android:name=".ViewConstitActivity" />
