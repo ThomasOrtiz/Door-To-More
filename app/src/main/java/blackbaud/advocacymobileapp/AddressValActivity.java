@@ -16,6 +16,7 @@ public class AddressValActivity extends AppCompatActivity {
     private String state;
     private String city;
     private String zipcode;
+    private String country;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class AddressValActivity extends AppCompatActivity {
         city = intent.getStringExtra("city");
         zipcode = intent.getStringExtra("zipcode");
         state = intent.getStringExtra("state");
+        country = intent.getStringExtra("country");
 
         Typeface headerTypeface = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
         Typeface bodyTypeface = Typeface.createFromAsset(getAssets(), "fonts/OpenSans-Regular.ttf");
@@ -64,6 +66,7 @@ public class AddressValActivity extends AppCompatActivity {
         intent.putExtra("city", city);
         intent.putExtra("state", state);
         intent.putExtra("zipcode", zipcode);
+        intent.putExtra("country", country);
         startActivity(intent);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivityForResult(intent, 0);

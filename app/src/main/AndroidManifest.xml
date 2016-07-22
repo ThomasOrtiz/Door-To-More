@@ -28,6 +28,7 @@
         <activity android:name=".ViewConstitActivity" />
         <activity android:name=".ProblemActivity" />
         <activity android:name=".PetitionActivity"/>
+        <activity android:name=".EditActivity"/>
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".DonateActivity"></activity>
     </application>

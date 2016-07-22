@@ -19,21 +19,11 @@
             android:paddingTop="@dimen/activity_vertical_margin"
             tools:context="blackbaud.advocacymobileapp.NewConstitActivity">
 
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:id="@+id/backButton"
-                tools:ignore="ContentDescription"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/backarrow"
-                android:layout_alignParentStart="true"
-                android:onClick="back"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="New Constituent Information"
+                android:text="Edit Constituent Information"
                 android:id="@+id/textView"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
@@ -196,31 +186,14 @@
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@+id/editText7" />
 
-
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Petition"
-                android:id="@+id/button1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Interested In"
+                android:id="@+id/textView14"
                 android:layout_below="@+id/editText9"
-                android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/editText8"
-                android:onClick="onClick"
-                android:background="#1c84c6"
-                android:textColor="#FFFFFF"
-                android:layout_margin="7dp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Make a Donation"
-                android:id="@+id/button3"
-                android:layout_below="@+id/button1"
-                android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/editText8"
-                android:background="#1ab394"
-                android:textColor="#FFFFFF"
-                android:layout_margin="7dp" />
+                android:layout_alignStart="@+id/button3" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -228,7 +201,7 @@
                 android:text="Fracking Prevention"
                 android:id="@+id/checkBox1"
                 android:checked="false"
-                android:layout_below="@+id/button3"
+                android:layout_below="@+id/textView14"
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@+id/editText8" />
             <CheckBox
@@ -259,10 +232,20 @@
                 android:layout_below="@+id/checkBox3"
                 android:layout_alignParentStart="true" />
 
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton1"
+                android:src="@drawable/backarrow"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/textView7" />
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText12"
+                android:id="@+id/editTex11"
                 android:layout_below="@+id/textView11"
                 android:layout_alignParentStart="true"
                 android:layout_alignEnd="@+id/textView3" />
@@ -270,35 +253,22 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Save New Constituent"
+                android:text="Save Constituent"
                 android:id="@+id/button"
-                android:layout_below="@+id/editText12"
+                android:layout_below="@+id/editTex11"
                 android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/editText5"
-                android:background="#1ab394"
-                android:textColor="#FFFFFF" />
+                android:layout_alignEnd="@+id/editText5" />
 
-            <EditText
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText11"
-                android:layout_alignTop="@+id/editText9"
-                android:layout_alignEnd="@+id/editText8"
-                android:layout_toEndOf="@+id/editText9" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Country"
-                android:id="@+id/textView15"
-                android:layout_above="@+id/editText11"
-                android:layout_toEndOf="@+id/editText9" />
-
+                android:id="@+id/imageButton"
+                android:src="@drawable/backarrow"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/textView7" />
 
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
-
-
-
