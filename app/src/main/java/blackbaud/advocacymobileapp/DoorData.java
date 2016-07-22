@@ -18,11 +18,11 @@ public class DoorData {
         addressList = new ArrayList<Address>();
         constitList = new ArrayList<Constituent>();
         petitionList = new ArrayList<String>();
-        test_addresses();
+        test_data();
     }
 
     // Should dynamically get addresses if this wasn't a prototype
-    private void test_addresses(){
+    private void test_data(){
         Address addr1 = new Address("713 A Smoke Rise Dr", "Central", "SC", "29630", "USA");
         Address addr2 = new Address("104 Evergreen Ave", "Springfield", "NJ", "07081", "USA");
         Address addr3 = new Address("1222 Moose Mountain Ct", "Quebec City", "Quebec", "G1A 1C5", "Canada");
@@ -36,6 +36,20 @@ public class DoorData {
         Address addr11 = new Address("6712 Unity Rd", "Tuscaloosa", "AL", "35401", "USA");
         Address addr12 = new Address("51 Scott Dr", "New City", "NY", "10956", "USA");
         Address addr13 = new Address("1129 Ambling Way", "Mt Pleasant", "SC", "29464", "USA");
+
+        this.addressList.add(addr1);
+        this.addressList.add(addr2);
+        this.addressList.add(addr3);
+        this.addressList.add(addr4);
+        this.addressList.add(addr5);
+        this.addressList.add(addr6);
+        this.addressList.add(addr7);
+        this.addressList.add(addr8);
+        this.addressList.add(addr9);
+        this.addressList.add(addr10);
+        this.addressList.add(addr11);
+        this.addressList.add(addr12);
+        this.addressList.add(addr13);
 
         Constituent constit1 = new Constituent("Vere", "Brooks", null, null, null, null, null, null, null, null, null, null, null, "7/21/2016" );
         Constituent constit2 = new Constituent("Kegan", "Colton", null, null, null, null, null, null, null, null, null, null, null, "7/21/2016");
@@ -51,20 +65,19 @@ public class DoorData {
         Constituent constit12 = new Constituent("Kegan", "Westbrook", null, null, null, null, null, null, null, null, null, null, null, "7/3/2016");
         Constituent constit13 = new Constituent("Weldon", "Bradley", null, null, null, null, null, null, null, null, null, null, null, "7/3/2016");
 
-
-        this.addressList.add(addr1);
-        this.addressList.add(addr2);
-        this.addressList.add(addr3);
-        this.addressList.add(addr4);
-        this.addressList.add(addr5);
-        this.addressList.add(addr6);
-        this.addressList.add(addr7);
-        this.addressList.add(addr8);
-        this.addressList.add(addr9);
-        this.addressList.add(addr10);
-        this.addressList.add(addr11);
-        this.addressList.add(addr12);
-        this.addressList.add(addr13);
+        this.constitList.add(constit1);
+        this.constitList.add(constit2);
+        this.constitList.add(constit3);
+        this.constitList.add(constit4);
+        this.constitList.add(constit5);
+        this.constitList.add(constit6);
+        this.constitList.add(constit7);
+        this.constitList.add(constit8);
+        this.constitList.add(constit9);
+        this.constitList.add(constit10);
+        this.constitList.add(constit11);
+        this.constitList.add(constit12);
+        this.constitList.add(constit13);
     }
 
     public ArrayList<Address> getAddressList() {
