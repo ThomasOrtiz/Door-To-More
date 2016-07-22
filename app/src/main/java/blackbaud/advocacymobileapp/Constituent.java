@@ -51,7 +51,13 @@ public class Constituent {
     }
 
     public String toString() {
-        return first_name + " " + last_name;
+        if(date.length() == 8) {
+            return date + "    " + first_name + " " + last_name;
+        }
+        if(date.length() == 9) {
+            return date + "  " + first_name + " " + last_name;
+        }
+        return date + " " + first_name + " " + last_name;
     }
 
 }
