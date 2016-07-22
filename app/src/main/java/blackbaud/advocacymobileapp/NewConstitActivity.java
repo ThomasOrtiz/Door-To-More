@@ -107,7 +107,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 break;
 
             case R.id.button3:
-                // donate
+                Intent intent = new Intent(NewConstitActivity.this, DonateActivity.class);
+                startActivity(intent);
                 break;
 
             default:

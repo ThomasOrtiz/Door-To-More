@@ -35,6 +35,22 @@ public class DoorData {
         Address addr12 = new Address("51 Scott Dr", "New City", "NY", "10956", "USA");
         Address addr13 = new Address("1129 Ambling Way", "Mt Pleasant", "SC", "29464", "USA");
 
+        /**
+        Constituent constit1 = new Constituent("Vere Brooks");
+        Constituent constit2 = new Constituent("Kegan Colton");
+        Constituent constit3 = new Constituent("Grier May");
+        Constituent constit4 = new Constituent("Thomas Thorburn");
+        Constituent constit5 = new Constituent("Ricky Putnam");
+        Constituent constit6 = new Constituent("Trace Stamp");
+        Constituent constit7 = new Constituent("Gabe Bailey");
+        Constituent constit8 = new Constituent("Elton Summers");
+        Constituent constit9 = new Constituent("Darwin Bryson");
+        Constituent constit10 = new Constituent("Stewart Aiken");
+        Constituent constit11 = new Constituent("William Harlow");
+        Constituent constit12 = new Constituent("Kegan Westbrook");
+        Constituent constit13 = new Constituent("Weldon Bradley");
+         */
+
         this.addressList.add(addr1);
         this.addressList.add(addr2);
         this.addressList.add(addr3);
