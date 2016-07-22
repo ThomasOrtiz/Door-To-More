@@ -48,6 +48,10 @@ public class AddProspectActivity extends AppCompatActivity {
         Address addr7 = new Address("42 Applegate Dr", "Orlando", "FL", "32801", "USA");
         Address addr8 = new Address("1776 Gettysburg Dr", "Philadelphia", "PA", "19019", "USA");
         Address addr9 = new Address("413 Sheltered Cove Ct", "Fort Mill", "SC", "29708", "USA");
+        Address addr10 = new Address("1534 152 Ave", "Cameron", "IL", "61423", "USA");
+        Address addr11 = new Address("6712 Unity Rd", "Tuscaloosa", "AL", "35401", "USA");
+        Address addr12 = new Address("51 Scott Dr", "New City", "NY", "10956", "USA");
+        Address addr13 = new Address("1129 Ambling Way", "Mt Pleasant", "SC", "29464", "USA");
 
         ArrayList<Address> addresses = new ArrayList<>();
         addresses.add(addr1);
@@ -59,6 +63,10 @@ public class AddProspectActivity extends AppCompatActivity {
         addresses.add(addr7);
         addresses.add(addr8);
         addresses.add(addr9);
+        addresses.add(addr10);
+        addresses.add(addr11);
+        addresses.add(addr12);
+        addresses.add(addr13);
 
         populate_addresses(addresses);
         populate_list();
