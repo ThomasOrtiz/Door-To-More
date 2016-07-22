@@ -20,18 +20,20 @@ public class Constituent {
     public String secondary_phone;
     public String email;
     public String notes;
-    public String street_address;
-    public String city;
+    public Address address;
     public String state;
+    public String city;
+    public String country;
     public String zipcode;
     public String county;
+    public String street;
     public Collection<InterestItem> interest_items;
     public String date;
 
     public Constituent(){}
 
     public Constituent(String first_name, String last_name, String middle_name, String preferred_pronoun, String secondary_phone, String email,
-                       String notes, String street_address, String city_address, String state_address, String zipcode_address, String county_address
+                       String notes, String street_address, String city_address, String state_address, String zipcode_address, String country_address, String county_address
             , Collection<InterestItem> interest_items, String date)
     {
         this.first_name = first_name;
@@ -41,11 +43,22 @@ public class Constituent {
         this.secondary_phone = secondary_phone;
         this.email = email;
         this.notes = notes;
-        this.state = street_address;
-        this.city= city_address;
-        this.state = state_address;
-        this.zipcode = zipcode_address;
-        this.county = county_address;
+        this.address = new Address(street_address, city_address, state_address, zipcode_address, county_address, country_address);
+        this.interest_items = interest_items;
+        this.date = date;
+    }
+
+    public Constituent(String first_name, String last_name, String middle_name, String preferred_pronoun, String secondary_phone, String email,
+                       String notes, Address address, Collection<InterestItem> interest_items, String date)
+    {
+        this.first_name = first_name;
+        this.middle_name = middle_name;
+        this.last_name = last_name;
+        this.preferred_pronoun = preferred_pronoun;
+        this.secondary_phone = secondary_phone;
+        this.email = email;
+        this.notes = notes;
+        this.address = address;
         this.interest_items = interest_items;
         this.date = date;
     }

@@ -12,19 +12,17 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import blackbaud.advocacymobileapp.InterestItem;
-
 public class NewConstitActivity extends AppCompatActivity implements View.OnClickListener{
 
 
     Constituent new_constituent = new Constituent();
 
     private Button submit, donate, petition;
-    private TextView first_name, last_name, phone_number, email, county, comment, street_view, city_view, state_view, zipcode_view;
+    private TextView first_name, last_name, phone_number, email, county, comment, street_view, city_view, state_view, zipcode_view, country_view;
     private CheckBox issue1, issue2, issue3;
     private DoorData myData;
     private ImageButton backarrow;
-    private String street, city, state, zipcode;
+    private String street, city, state, zipcode, country;
 
 
 
@@ -34,8 +32,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_new_constit);
         myData = DoorData.getInstance();
 
-        backarrow = (ImageButton) findViewById(R.id.imageButton);
-        backarrow.setOnClickListener(this);
+        //backarrow = (ImageButton) findViewById(R.id.imageButton);
+        //backarrow.setOnClickListener(this);
 
         submit = (Button) findViewById(R.id.button);
         submit.setOnClickListener(this);
@@ -52,7 +50,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         phone_number = (EditText) findViewById(R.id.editText2);
         email = (EditText) findViewById(R.id.editText4);
         county = (EditText) findViewById(R.id.editText9);
-        comment = (EditText) findViewById(R.id.editTex11);
+        country_view = (EditText) findViewById(R.id.editText11);
+        comment = (EditText) findViewById(R.id.editText12);
         street_view = (EditText) findViewById(R.id.editText5);
         city_view = (EditText) findViewById(R.id.editText6);
         state_view = (EditText) findViewById(R.id.editText7);
@@ -66,17 +65,20 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         city = intent.getStringExtra("city");
         zipcode = intent.getStringExtra("zipcode");
         state = intent.getStringExtra("state");
+        country = intent.getStringExtra("country");
 
         Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
         state_view.setText(state);
         street_view.setText(street);
         city_view.setText(city);
         zipcode_view.setText(zipcode);
+        country_view.setText(country);
 
         state_view.setTypeface(tf);
         street_view.setTypeface(tf);
         city_view.setTypeface(tf);
         zipcode_view.setTypeface(tf);
+        country_view.setTypeface(tf);
     }
 
 
@@ -111,11 +113,9 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 new_constituent.first_name = first_name.toString();
                 new_constituent.last_name = last_name.toString();
                 new_constituent.phone = phone_number.toString();
+                new_constituent.address = new Address(street.toString(), city.toString(), state.toString(),
+                        zipcode.toString(), country.toString(), county.toString());
                 new_constituent.email = email.toString();
-                new_constituent.state = state.toString();
-                new_constituent.city = city.toString();
-                new_constituent.county = county.toString();
-                new_constituent.zipcode = zipcode.toString();
                 new_constituent.notes = comment.toString();
                 myData.addConstituient(new_constituent);
                 finish();
