@@ -87,11 +87,11 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 new_constituent.last_name = last_name.toString();
                 new_constituent.phone = phone_number.toString();
                 new_constituent.email = email.toString();
-                new_constituent.state_address = state.toString();
-                new_constituent.city_address = city.toString();
+                new_constituent.state = state.toString();
+                new_constituent.city = city.toString();
                 new_constituent.street_address = street_address.toString();
-                new_constituent.county_address = county.toString();
-                new_constituent.zipcode_address = zipcode.toString();
+                new_constituent.county = county.toString();
+                new_constituent.zipcode = zipcode.toString();
                 new_constituent.notes = comment.toString();
                 myData.addConstituient(new_constituent);
                 finish();

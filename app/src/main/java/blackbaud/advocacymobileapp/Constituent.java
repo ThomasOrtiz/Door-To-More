@@ -20,21 +20,30 @@ public class Constituent {
     public String secondary_phone;
     public String email;
     public String notes;
-    public Collection<InterestItem> interest_items;
     public String street_address;
-    public String city_address;
-    public String state_address;
-    public String zipcode_address;
-    public String county_address;
+    public String city;
+    public String state;
+    public String zipcode;
+    public String county;
+    public Collection<InterestItem> interest_items;
 
-    public void Constituent(String street_address, String city_address, String state_address, String zipcode_address, String county_address)
+    public void Constituent(String first_name, String last_name, String middle_name, String preferred_pronoun, String secondary_phone, String email,
+                            String notes, String street_address, String city_address, String state_address, String zipcode_address, String county_address
+                            , Collection<InterestItem> interest_items)
     {
-        this.state_address = street_address;
-        this.city_address = city_address;
-        this.state_address = state_address;
-        this.zipcode_address = zipcode_address;
-        this.county_address = county_address;
-
+        this.first_name = first_name;
+        this.middle_name = middle_name;
+        this.last_name = last_name;
+        this.preferred_pronoun = preferred_pronoun;
+        this.secondary_phone = secondary_phone;
+        this.email = email;
+        this.notes = notes;
+        this.state = street_address;
+        this.city= city_address;
+        this.state = state_address;
+        this.zipcode = zipcode_address;
+        this.county = county_address;
+        this.interest_items = interest_items;
     }
 
 }
