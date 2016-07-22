@@ -10,10 +10,13 @@ import android.widget.EditText;
 
 public class ProblemActivity extends AppCompatActivity {
 
+    private DoorData myData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_problem);
+        myData = DoorData.getInstance();
     }
 
     public void clickSave(View view) {
@@ -21,7 +24,8 @@ public class ProblemActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.problemEditText);
         String message = editText.getText().toString();
         //Save message
-        //Remove constituent
+        Address current = myData.getCurrentAddress();
+        myData.removeAddress(current);
         startActivity(intent);
     }
 

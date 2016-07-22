@@ -3,20 +3,23 @@ package blackbaud.advocacymobileapp;
 import java.util.ArrayList;
 
 /**
+ * Contains all of the data used for the app in a central location.
+ *
  * Created by chris.brown on 07/21/2016.
  */
 public class DoorData {
     private static DoorData data = null;
+    private Address currentAddress = null;
     private ArrayList<Address> addressList;
     //private ArrayList<Constituent> constitList;
 
     private DoorData() {
         addressList = new ArrayList<Address>();
-        get_addresses();
+        test_addresses();
     }
 
     // Should dynamically get addresses if this wasn't a prototype
-    private void get_addresses(){
+    private void test_addresses(){
         Address addr1 = new Address("713 A Smoke Rise Dr", "Central", "SC", "29630", "USA");
         Address addr2 = new Address("104 Evergreen Ave", "Springfield", "NJ", "07081", "USA");
         Address addr3 = new Address("1222 Moose Mountain Ct", "Quebec City", "Quebec", "G1A 1C5", "Canada");
@@ -30,7 +33,6 @@ public class DoorData {
         Address addr11 = new Address("6712 Unity Rd", "Tuscaloosa", "AL", "35401", "USA");
         Address addr12 = new Address("51 Scott Dr", "New City", "NY", "10956", "USA");
         Address addr13 = new Address("1129 Ambling Way", "Mt Pleasant", "SC", "29464", "USA");
-
 
         this.addressList.add(addr1);
         this.addressList.add(addr2);
@@ -66,6 +68,7 @@ public class DoorData {
     public void removeAddress(Address addr) {
         int index = this.addressList.indexOf(addr);
         this.addressList.remove(index);
+        getAddressStrings();
     }
 
     /*public ArrayList<Constituent> getConstituents() {
@@ -80,6 +83,14 @@ public class DoorData {
         int index = this.constitList.indexOf(con);
         this.constitList.remove(index);
     }*/
+
+    public void setCurrentAddress(Address addr) {
+        this.currentAddress = addr;
+    }
+
+    public Address getCurrentAddress() {
+        return this.currentAddress;
+    }
 
     public static DoorData getInstance() {
         if(data == null) {

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class AddProspectActivity extends AppCompatActivity {
     ArrayList<Address> addressItems;
     ArrayAdapter<String> adapter;
+    private DoorData myData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +23,10 @@ public class AddProspectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_prospect);
 
-        DoorData data = DoorData.getInstance();
-        addressItems = data.getAddressList();
+        myData = DoorData.getInstance();
+        addressItems = myData.getAddressList();
 
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data.getAddressStrings());
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, myData.getAddressStrings());
 
         ListView listView = (ListView) findViewById(R.id.listView);
         if(listView!=null) listView.setAdapter(adapter);
@@ -39,6 +40,7 @@ public class AddProspectActivity extends AppCompatActivity {
                 String addressLineTwo = null;
                 for (Address a : addressItems) {
                     if(a.toString() == item) {
+                        myData.setCurrentAddress(a);
                         addressLineOne = a.get_street();
                         addressLineTwo = a.get_city() + ", " + a.get_state() + " " + a.get_zip();
                         break;
