@@ -18,7 +18,8 @@
         android:background="#ed5565"
         android:textColor="#FFFFFF"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="failedConstit"/>
 
     <Button
         android:layout_width="200dp"
@@ -29,7 +30,8 @@
         android:background="#1ab394"
         android:layout_above="@+id/button"
         android:layout_alignStart="@+id/button"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:onClick="successConstit"/>
 
     <TextView
         android:layout_width="250dp"

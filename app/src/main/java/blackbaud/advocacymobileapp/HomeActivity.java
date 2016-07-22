@@ -14,7 +14,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onProsAddressClicked(View view) {
-        Intent nextScreen = new Intent(getApplicationContext(), HomeActivity.class);
+        Intent nextScreen = new Intent(getApplicationContext(), AddProspectActivity.class);
         nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivityForResult(nextScreen, 0);
         overridePendingTransition(0,0); //0 for no animation
