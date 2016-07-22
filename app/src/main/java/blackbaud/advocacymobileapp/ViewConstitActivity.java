@@ -54,7 +54,7 @@ public class ViewConstitActivity extends AppCompatActivity {
                 String name = item.substring(item.indexOf(" ")).trim();
                 String firstName = name.substring(0, name.indexOf(" "));
                 String lastName = name.substring(name.indexOf(" "));
-                Intent intent = new Intent(self, AddressValActivity.class);
+                Intent intent = new Intent(self, EditActivity.class);
                 intent.putExtra("first_name", firstName);
                 intent.putExtra("last_name", lastName);
                 startActivity(intent);
