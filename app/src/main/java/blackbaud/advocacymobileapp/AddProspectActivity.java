@@ -56,7 +56,13 @@ public class AddProspectActivity extends AppCompatActivity {
     }
 
     public void back(View view) {
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
+        finish();
+    }
+
+    public void addConstituent(View view) {
+        Intent nextScreen = new Intent(getApplicationContext(), NewConstitActivity.class);
+        nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivityForResult(nextScreen, 0);
+        overridePendingTransition(0, 0); //0 for no animation
     }
 }

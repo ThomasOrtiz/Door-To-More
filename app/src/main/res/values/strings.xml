@@ -14,8 +14,18 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="petition">"
+        Climate change and habitat destruction is driving tens of thousands of species of plants and animals to the brink of extinction.
+
+        For almost 40 years, the Endangered Species Act (ESA) has been a vital part of the fight to save wild places and wild animals, but under the new anti-environment leadership in the U.S. Senate and House of Representatives, we have seen repeated attempts to attack the ESA and other critical wildlife protections.
+
+        Whether it has been attacks on protections for specific species like wolves, sea otters, salmon and sage grouse; attempting to subvert funding for undermining anti-poaching efforts that are working to keep rhinos and elephants from extinction, the new Congress is determined to destroy the critical protections that wildlife depend on.
+
+        But we've seen over and over that calling for protections for endagered species WORKS. Make sure Congress hears us loud and clear: Oppose attacks on wildlife!"
+    </string>
+    <string name="petition_title">"Tell Congress to Protect Our Precious Wildlife</string>
     <string name="prospect_addresses">Prospect Addresses</string>
-    <string name="map">Map</string>
-    <string name="add_constituent">Add constituent</string>
-    <string name="back">Back</string>
+    <string name="mapcircle">Map</string>
+    <string name="plusbutton">Add constituent</string>
+    <string name="backarrow">Back</string>
 </resources>
