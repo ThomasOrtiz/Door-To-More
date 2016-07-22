@@ -1,12 +1,15 @@
 package blackbaud.advocacymobileapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -22,6 +25,11 @@ public class AddProspectActivity extends AppCompatActivity {
         // Comes with it, can't remove
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_prospect);
+
+        //font stuff
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
+        TextView x = (TextView) findViewById(R.id.textView);
+        if (x!=null) x.setTypeface(tf);
 
         myData = DoorData.getInstance();
         addressItems = myData.getAddressList();
