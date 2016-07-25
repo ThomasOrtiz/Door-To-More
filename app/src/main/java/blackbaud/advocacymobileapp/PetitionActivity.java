@@ -9,43 +9,53 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PetitionActivity extends AppCompatActivity {
+public class PetitionActivity extends AppCompatActivity implements View.OnClickListener{
 
     private DoorData myData;
     private Intent previous;
+    private Button submit;
+    private Button cancel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_petition);
         myData = DoorData.getInstance();
         previous = new Intent(this, NewConstitActivity.class);
+        submit = (Button) findViewById(R.id.button3);
+        cancel = (Button) findViewById(R.id.button4);
 
         Typeface headerTypeface = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
         Typeface bodyTypeface = Typeface.createFromAsset(getAssets(), "fonts/OpenSans-Regular.ttf");
 
-        TextView textBody = (TextView)findViewById(R.id.textView12);
-        TextView textHeader = (TextView)findViewById(R.id.textView13);
-        Button textYesButton = (Button)findViewById(R.id.button3);
-        TextView textNoButton = (TextView)findViewById(R.id.textView14);
-        textBody.setMovementMethod(new ScrollingMovementMethod());
+       // TextView textBody = (TextView)findViewById(R.id.textView12);
+       // TextView textHeader = (TextView)findViewById(R.id.textView13);
+       // TextView textNoButton = (TextView)findViewById(R.id.textView14);
+       // textBody.setMovementMethod(new ScrollingMovementMethod());
 
-        textBody.setTypeface(bodyTypeface);
-        textHeader.setTypeface(headerTypeface);
-        textNoButton.setTypeface(bodyTypeface);
-        textYesButton.setTypeface(bodyTypeface);
+        submit.setOnClickListener(this);
+        cancel.setOnClickListener(this);
+
+
+    //    textBody.setTypeface(bodyTypeface);
+    //    textHeader.setTypeface(headerTypeface);
+    //    textNoButton.setTypeface(bodyTypeface);
     }
 
-    public void signPetition(View view) {
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("first_name") + " " + intent.getStringExtra("last_name");
-        myData.addPetitionSign(name);
+    public void onClick(View v) {
 
-        finish();
+        switch (v.getId()) {
+
+            case R.id.button3:
+
+                finish();
+                break;
+
+            case R.id.button4:
+
+                finish();
+                break;
+        }
     }
 
-    public void cancelPetition(View view) {
-        finish();
-    }
 }

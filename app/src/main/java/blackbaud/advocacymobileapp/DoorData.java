@@ -2,6 +2,7 @@ package blackbaud.advocacymobileapp;
 
 import java.util.ArrayList;
 
+
 /**
  * Contains all of the data used for the app in a central location.
  *
@@ -108,7 +109,41 @@ public class DoorData {
     }
 
     public ArrayList<Constituent> getConstituents() {
-        return this.constitList;
+
+        ArrayList<Constituent> constituents = new ArrayList<>();
+        InterestItem interest = new InterestItem();
+        interest.InterestItem("Wants to volunteeer", true);
+        ArrayList<InterestItem> interests = new ArrayList<InterestItem>();
+        interests.add(interest);
+
+        Constituent constit1 = new Constituent("Vere", "Brooks", "vb@gmail.com", "likes bears", "1 E St.", "Charleston", "SC", "70433", "Berkley", interests, "7/21/2016" );
+        Constituent constit2 = new Constituent("Kegan", "Colton", "kc@gmail.com", "likes pie", "2 E. St.", "Mt. Pleasant", "SC", "29403", "Charleston", interests, "7/21/2016");
+        Constituent constit3 = new Constituent("Grier", "May", "mg@gmail.com", "a pisces", "3 E. St.", "Charleston", "SC", "29403", "Charleston", interests, "7/21/2016");
+        Constituent constit4 = new Constituent("Thomas", "Thorburn", "tt@gmail.com", "rides horses", "4 E. St.", "Charleston", "SC", "29403", "Charleston", interests, "7/19/2016");
+        Constituent constit5 = new Constituent("Ricky", "Putnam", "rp@gmail.com", "owns a farm", "5 E. St.", "Charleston", "SC", "29403", "Charleston", interests, "7/19/2016");
+        Constituent constit6 = new Constituent("Trace", "Stamp", "ts@gmail.com", "favorite color is blue", "6 E. St.", "N. Charleston", "SC", "29429", "Berkley", interests, "7/13/2016");
+        Constituent constit7 = new Constituent("Gabe", "Bailey", "gb@gmail.com", "yoyo champion", "7 E. St.", "Summerville", "SC", "29401", "Charleston", interests, "7/13/2016");
+        Constituent constit8 = new Constituent("Elton", "Summers", "es@gmail.com", "plays volleyball", "8 E. St.", "Ladson", "SC", "29401", "Charleston", interests, "7/13/2016");
+        Constituent constit9 = new Constituent("Darwin", "Bryson", "db@gmail.com", "volunteers at humane society", "9 E. St.", "Charleston", "SC", "29403", "Charleston", interests, "7/4/2016");
+        Constituent constit10 = new Constituent("Stewart", "Aiken", "sa@gmail.com", "vegetarian", "10 E. St.", "Charleston", "SC", "29424", "Charleston", interests, "7/4/2016");
+        Constituent constit11 = new Constituent("William", "Harlow", "wh@gmail.com", "has 5 kids", "11 E. St.", "Charleston", "SC", "29403", "Charleston", interests, "7/4/2016");
+        Constituent constit12 = new Constituent("Kegan", "Westbrook", "kw@gmail.com", "goes fishing", "12 E. St.", "Charleston", "SC", "29403", "Charleston", interests, "7/3/2016");
+        Constituent constit13 = new Constituent("Weldon", "Bradley", "bw@gmail.com", "flies planes", "13 E. St.", "Charleston", "SC", "29403", "Charleston", interests, "7/3/2016");
+
+        constituents.add(constit1);
+        constituents.add(constit2);
+        constituents.add(constit3);
+        constituents.add(constit4);
+        constituents.add(constit5);
+        constituents.add(constit6);
+        constituents.add(constit7);
+        constituents.add(constit8);
+        constituents.add(constit9);
+        constituents.add(constit10);
+        constituents.add(constit11);
+        constituents.add(constit12);
+        constituents.add(constit13);
+        return constituents;
     }
 
     public String[] getConstituentStrings() {

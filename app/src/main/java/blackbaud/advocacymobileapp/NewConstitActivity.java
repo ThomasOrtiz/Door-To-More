@@ -100,7 +100,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                     new_constituent.interest_items.add(item);
                 }
                 InterestItem item2 = new InterestItem();
-                item2.is_interested = issue2.isChecked();
+                item2.is_interested = issue3.isChecked();
                 item2.name = "dsd";
                 if(item2.is_interested){
                     new_constituent.interest_items.add(item2);
@@ -122,25 +122,27 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 intent = new Intent(this, PetitionActivity.class);
                 intent.putExtra("first_name", first_name.toString());
                 intent.putExtra("last_name", last_name.toString());
+                startActivity(intent);
                 break;
 
             // Make a donation
             case R.id.button3:
                 intent = new Intent(this, DonateActivity.class);
+                startActivity(intent);
                 break;
 
-            case R.id.imageButton:
-                finish();
-                break;
+         //   case R.id.imageButton:
+         //       finish();
+          //      break;
 
             default:
                 break;
         }
 
-        if(intent != null) {
-            startActivity(intent);
-            finish();
-        }
+       // if(intent != null) {
+       //     startActivity(intent);
+       //     finish();
+        //}
 
     }
 

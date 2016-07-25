@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class DonateActivity extends AppCompatActivity implements View.OnClickListener{
 
-
+    private Intent previous;
     private Button submit;
 
     @Override
@@ -24,6 +24,7 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()) {
 
             case R.id.button5:
+                Intent intent = getIntent();
                 finish();
                 break;
         }

@@ -63,20 +63,18 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
 
         for(Constituent constituent: constituentsItems)
         {
-            if((first_name.equals(constituent.first_name))&&(last_name.equals(constituent.last_name))){
-                first_name = constituent.first_name;
-                last_name = constituent.last_name;
+            if((first_name.toString().equals(constituent.first_name.toString()))){
                 phone_number = constituent.phone;
                 email = constituent.email;
-                street = constituent.street;
-                city = constituent.city;
-                state = constituent.state;
-                zipcode = constituent.zipcode;
-                county = constituent.county;
+                street = "1 E St.";
+                city = "Charleston";
+                state = "SC";
+                zipcode = "70433";
+                county = "Berkely";
                 if(constituent.notes !=null){
                     comment = constituent.notes;
                 }
-
+                break;
             }
         }
 
