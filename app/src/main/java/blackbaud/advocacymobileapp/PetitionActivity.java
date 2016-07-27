@@ -46,9 +46,15 @@ public class PetitionActivity extends AppCompatActivity implements View.OnClickL
 
         switch (v.getId()) {
 
-            case R.id.button3:
+            case R.id.button3: //  submit
                 finish();
                 break;
+			case R.id.button4: // cancel
+				finish();
+				break;
+			case R.id.textView14: // cancel
+				finish();
+				break;
         }
     }
 

@@ -59,8 +59,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:paddingTop="10dp"
-            android:textSize="20dp"
-            android:onClick="signPetition"/>
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,12 +77,10 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:background="@android:color/transparent"
             android:id="@+id/button4"
-            android:visibility="invisible"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:onClick="onNoThanksClicked"
             android:allowUndo="false" />
 
     </RelativeLayout>
