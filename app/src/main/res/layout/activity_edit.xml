@@ -54,7 +54,10 @@
                 android:id="@+id/editText3"
                 android:layout_below="@+id/textView2"
                 android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/textView4" />
+                android:layout_alignEnd="@+id/textView4"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -62,7 +65,10 @@
                 android:id="@+id/editText"
                 android:layout_alignTop="@+id/editText3"
                 android:layout_alignEnd="@+id/textView"
-                android:layout_alignStart="@+id/textView3" />
+                android:layout_alignStart="@+id/textView3"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -80,7 +86,10 @@
                 android:ems="10"
                 android:id="@+id/editText2"
                 android:layout_below="@+id/textView4"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -98,7 +107,10 @@
                 android:ems="10"
                 android:id="@+id/editText4"
                 android:layout_below="@+id/textView5"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -115,7 +127,10 @@
                 android:id="@+id/editText5"
                 android:layout_below="@+id/textView6"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -151,7 +166,10 @@
                 android:layout_below="@+id/textView7"
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@+id/textView8"
-                android:layout_alignEnd="@+id/textView5" />
+                android:layout_alignEnd="@+id/textView5"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -159,7 +177,10 @@
                 android:id="@+id/editText7"
                 android:layout_below="@+id/textView8"
                 android:layout_alignStart="@+id/textView8"
-                android:layout_toStartOf="@+id/editText" />
+                android:layout_toStartOf="@+id/editText"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -167,7 +188,10 @@
                 android:id="@+id/editText8"
                 android:layout_below="@+id/textView9"
                 android:layout_alignStart="@+id/textView9"
-                android:layout_alignEnd="@+id/editText" />
+                android:layout_alignEnd="@+id/editText"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -184,7 +208,10 @@
                 android:id="@+id/editText9"
                 android:layout_below="@+id/textView10"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/editText7" />
+                android:layout_toStartOf="@+id/editText7"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -248,7 +275,10 @@
                 android:id="@+id/editTex11"
                 android:layout_below="@+id/textView11"
                 android:layout_alignParentStart="true"
-                android:layout_alignEnd="@+id/textView3" />
+                android:layout_alignEnd="@+id/textView3"
+                android:maxLines="1"
+                android:background="@drawable/back"
+                android:padding="10dp"/>
 
             <Button
                 android:layout_width="wrap_content"
