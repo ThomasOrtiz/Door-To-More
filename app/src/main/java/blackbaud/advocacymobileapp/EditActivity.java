@@ -111,6 +111,7 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         Intent intent = null;
+        new_constituent.interest_items = new ArrayList<InterestItem>();
 
         switch (v.getId()) {
 
