@@ -11,7 +11,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout5">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -36,24 +37,27 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout3">
+        android:id="@+id/relativeLayout3"
+        android:layout_below="@+id/relativeLayout5">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="38dp">
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true">
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="16"
-                android:paddingTop="50dp"
                 android:hint="Enter Filter Text Here"
                 android:id="@+id/filterText"
                 android:width="300dp"
-                android:maxWidth="300dp" />
+                android:maxWidth="300dp"
+                android:background="@drawable/back"
+                android:padding="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="24dp"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -63,8 +67,8 @@
                 android:background="@android:color/transparent"
                 android:onClick = "onFilterButtonClicked"
                 android:paddingTop="20dp"
-                android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/sortByButton" />
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/sortByButton"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -75,7 +79,7 @@
                 android:onClick = "onSortButtonClicked"
                 android:paddingTop="20dp"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"/>
 
         </RelativeLayout>
     </RelativeLayout>
@@ -92,7 +96,8 @@
             android:layout_gravity="center_horizontal|bottom|left"
             android:layout_marginLeft="0dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
     </RelativeLayout>
 
 </RelativeLayout>

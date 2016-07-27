@@ -149,7 +149,7 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
 
-            case R.id.imageButton1:
+            case R.id.backButton:
                 finish();
                 break;
 
@@ -164,4 +164,8 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+	public void onBackButtonClicked(View view) {
+		finish();
+	}
 }
