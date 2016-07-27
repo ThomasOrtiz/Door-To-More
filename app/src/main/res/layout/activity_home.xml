@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:id="@+id/imageButton1"
-        android:src="@drawable/door_adjar_bg"
+        android:src="@drawable/door_adjar_no_bg"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="67dp" />
