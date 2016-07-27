@@ -15,19 +15,26 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal">
 
-        <TextView
+        <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/petition"
-            android:textSize="15dp"
-            android:id="@+id/textView12"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
+            android:id="@+id/scrollView2"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/textView13"
-            android:layout_above="@+id/button3"
-            android:layout_marginTop="10dp"
-            android:maxLines="100"
-            android:scrollbars="vertical"/>
+            android:layout_above="@+id/button3">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/petition"
+                android:textSize="15dp"
+                android:id="@+id/textView12"
+                android:maxLines="100"
+                android:scrollbars="vertical"
+                android:layout_above="@+id/button3"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView13"/>
+        </ScrollView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -66,7 +73,7 @@
             android:layout_alignParentTop="false"
             android:layout_marginTop="15dp"
             android:textSize="20dp"
-            android:onClick="cancelPetition"/>
+            android:onClick="onNoThanksClicked"/>
 
         <Button
             android:layout_width="fill_parent"
@@ -76,6 +83,7 @@
             android:visibility="invisible"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
+            android:onClick="onNoThanksClicked"
             android:allowUndo="false" />
 
     </RelativeLayout>

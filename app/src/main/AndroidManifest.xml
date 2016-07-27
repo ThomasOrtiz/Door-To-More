@@ -22,12 +22,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddressValActivity" />
-        <activity android:name=".AddProspectActivity" />
-        <activity android:name=".NewConstitActivity" />
-        <activity android:name=".ViewConstitActivity" />
+        <activity android:name=".AddProspectActivity"/>
+        <activity android:name=".NewConstitActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ViewConstitActivity" android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".ProblemActivity" />
         <activity android:name=".PetitionActivity"/>
-        <activity android:name=".EditActivity"/>
+        <activity android:name=".EditActivity" android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".DonateActivity"></activity>
     </application>
