@@ -10,7 +10,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
     Constituent new_constituent = new Constituent();
 
     private Button submit, donate, petition;
-    private CheckBox issue1, issue2, issue3;
+    private CheckBox issue1, issue2, issue3, petition_checkbox, donation_checkbox;
     private DoorData myData;
     private ImageButton backarrow;
     private TextView first_name_view, last_name_view, phone_number_view, email_view, street_address_view, city_view, state_view, zipcode_view, county_view, comment_view, street_view;
@@ -46,18 +45,20 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
 
         first_name_view = (EditText) findViewById(R.id.editText3);
         last_name_view = (EditText) findViewById(R.id.editText);
-        phone_number_view = (EditText) findViewById(R.id.editText2);
+        phone_number_view =((EditText) findViewById(R.id.editText2));
         email_view = (EditText) findViewById(R.id.editText4);
+        county_view = (EditText) findViewById(R.id.editText9);
+        comment_view = (EditText) findViewById(R.id.editText12);
         street_address_view = (EditText) findViewById(R.id.editText5);
         city_view = (EditText) findViewById(R.id.editText6);
         state_view = (EditText) findViewById(R.id.editText7);
         zipcode_view = (EditText) findViewById(R.id.editText8);
-        county_view = (EditText) findViewById(R.id.editText9);
-        comment_view = (EditText) findViewById(R.id.editTex11);
-
         issue1 = (CheckBox) findViewById(R.id.checkBox1);
         issue2 = (CheckBox) findViewById(R.id.checkBox2);
         issue3 = (CheckBox) findViewById(R.id.checkBox3);
+        petition_checkbox = (CheckBox) findViewById(R.id.checkBox);
+        donation_checkbox = (CheckBox) findViewById(R.id.checkBox4);
+
 
 
 
@@ -142,14 +143,14 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
                 new_constituent.street = street_address_view.toString();
                 new_constituent.county = county_view.toString();
                 new_constituent.zipcode = zipcode_view.toString();
-                new_constituent.notes = comment_view.toString();
-                myData.addConstituient(new_constituent);
+//                new_constituent.notes = comment_view.toString();
+                //               myData.addConstituient(new_constituent);
                 finish();
                 // submit
                 break;
 
 
-            case R.id.backButton:
+            case R.id.imageButton1:
                 finish();
                 break;
 
@@ -162,10 +163,9 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
             finish();
         }
-
     }
 
-	public void onBackButtonClicked(View view) {
-		finish();
-	}
+    public void back(View view) {
+        finish();
+    }
 }

@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NewConstitActivity extends AppCompatActivity implements View.OnClickListener{
 
 
@@ -19,7 +22,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
 
     private Button submit, donate, petition;
     private TextView first_name, last_name, phone_number, email, comment, street_view, city_view, state_view, zipcode_view, county_view;
-    private CheckBox issue1, issue2, issue3;
+    private CheckBox issue1, issue2, issue3, petition_checkbox, donation_checkbox;
     private DoorData myData;
     private String street, city, state, zipcode, county;
 
@@ -55,6 +58,8 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
         issue1 = (CheckBox) findViewById(R.id.checkBox1);
         issue2 = (CheckBox) findViewById(R.id.checkBox2);
         issue3 = (CheckBox) findViewById(R.id.checkBox3);
+        petition_checkbox = (CheckBox) findViewById(R.id.checkBox);
+        donation_checkbox = (CheckBox) findViewById(R.id.checkBox4);
 
         Intent intent = getIntent();
         street = intent.getStringExtra("street");
@@ -83,6 +88,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
 
         Intent intent = null;
+        new_constituent.interest_items = new ArrayList<InterestItem>();
 
         switch (v.getId()) {
 
@@ -112,7 +118,7 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 new_constituent.address = new Address(street, city, state, zipcode, county);
                 new_constituent.email = email.toString();
                 new_constituent.notes = comment.toString();
-                myData.addConstituient(new_constituent);
+                //myData.addConstituient(new_constituent);
                 finish();
                 // submit
                 break;
@@ -123,25 +129,27 @@ public class NewConstitActivity extends AppCompatActivity implements View.OnClic
                 intent.putExtra("first_name", first_name.toString());
                 intent.putExtra("last_name", last_name.toString());
                 startActivity(intent);
+                petition_checkbox.setChecked(true);
                 break;
 
             // Make a donation
             case R.id.button3:
                 intent = new Intent(this, DonateActivity.class);
                 startActivity(intent);
+                donation_checkbox.setChecked(true);
                 break;
 
-         //   case R.id.imageButton:
-         //       finish();
-          //      break;
+            //   case R.id.imageButton:
+            //       finish();
+            //      break;
 
             default:
                 break;
         }
 
-       // if(intent != null) {
-       //     startActivity(intent);
-       //     finish();
+        // if(intent != null) {
+        //     startActivity(intent);
+        //     finish();
         //}
 
     }

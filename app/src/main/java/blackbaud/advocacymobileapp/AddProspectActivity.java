@@ -80,16 +80,18 @@ public class AddProspectActivity extends AppCompatActivity {
 
     public void back(View view) {
         Intent nextScreen = new Intent(getApplicationContext(), HomeActivity.class);
-        nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivityForResult(nextScreen, 0);
-        overridePendingTransition(0, 0); //0 for no animation
+        // nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        //  startActivityForResult(nextScreen, 0);
+        //   overridePendingTransition(0, 0); //0 for no animation
+        startActivity(nextScreen);
         finish();
     }
 
     public void addConstituent(View view) {
         Intent nextScreen = new Intent(getApplicationContext(), NewConstitActivity.class);
-        nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivityForResult(nextScreen, 0);
-        overridePendingTransition(0, 0); //0 for no animation
+        //   nextScreen.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        //     startActivityForResult(nextScreen, 0);
+        //      overridePendingTransition(0, 0); //0 for no animation
+        startActivity(nextScreen);
     }
 }
