@@ -95,7 +95,9 @@
         android:layout_above="@+id/button5"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="112dp"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:background="#1c84c6"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -104,6 +106,8 @@
         android:id="@+id/button5"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/button4" />
+        android:layout_alignEnd="@+id/button4"
+        android:background="#1ab394"
+        android:textColor="#FFFFFF"/>
 
 </RelativeLayout>
